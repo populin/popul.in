@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+
+  populin-api:
+    build: 
+      context: docker/golang
+    container_name: populin-api
+    depends_on: 
+      - populin-elasticsearch
+    environment: 
+      ELASTIC_PORT: 9200
+      ELASTIC_URL: populin-elasticsearch
+      ENV: dev
+    networks: 
+      - populin
+    ports:
+      - "80:80"
+    tty: true
+    volumes: 
+      - ".:/go/src/github.com/populin/popul.in"
+    working_dir: /go/src/github.com/populin/popul.in
+
+  populin-elasticsearch: 
+    container_name: populin-elasticsearch
+    image: "docker.elastic.co/elasticsearch/elasticsearch:5.6.2"
+    networks: 
+      - populin
+    ports: 
+      - "9202:9200"
+    volumes: 
+      - "./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
+      - "./data/elastic:/usr/share/elasticsearch/data"
+
+  populin-kibana: 
+    container_name: populin-kibana
+    depends_on: 
+      - populin-elasticsearch
+    image: "docker.elastic.co/kibana/kibana:5.6.2"
+    networks: 
+      - populin
+    ports: 
+      - "5601:5601"
+    volumes: 
+      - "./config/kibana.yml:/usr/share/kibana/config/kibana.yml"
+
+networks:
+  populin:
+    driver: bridge

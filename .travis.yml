@@ -1,0 +1,21 @@
+language: go
+
+services:
+  - docker
+
+sudo: required
+
+notifications:
+  email: false
+
+before_script:
+  - sudo chown -R 1000:1000 data
+  - sudo chmod -R 777 data
+  - make build
+  - make start
+  - make dep-install
+
+script:
+  - make import-geography-fixtures
+  - make test-geography
+  - make lint-geography

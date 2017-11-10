@@ -1,0 +1,4 @@
+vendor
+data/elastic/*
+data/geography/real/*
+popul.in
