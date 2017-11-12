@@ -1,21 +1,24 @@
 language: go
 
 services:
-  - docker
+  - elasticsearch
 
-sudo: required
+env:
+  global:
+    - ELASTIC_PORT: 9200
+    - ELASTIC_URL: localhost
 
 notifications:
   email: false
 
 before_script:
-  - sudo chown -R 1000:1000 data
-  - sudo chmod -R 777 data
-  - make build
-  - make start
-  - make dep-install
+  - sleep 10
+  - go get github.com/golang/dep/... && go install github.com/golang/dep/...
+  - go get github.com/DATA-DOG/godog/cmd/godog && go install github.com/DATA-DOG/godog/cmd/godog
+  - go get gopkg.in/alecthomas/gometalinter.v1 && go install gopkg.in/alecthomas/gometalinter.v1 && gometalinter.v1 --install
+  - dep ensure -vendor-only
 
 script:
-  - make import-geography-fixtures
-  - make test-geography
-  - make lint-geography
+  - go install github.com/populin/popul.in/importer && importer data/geography/fixtures
+  - go test -race -v
+  - gometalinter.v1 --config gometalinter.json ./...
