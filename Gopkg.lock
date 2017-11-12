@@ -32,6 +32,12 @@
   revision = "130e6b02ab059e7b717a096f397c5b60111cae74"
 
 [[projects]]
+  name = "github.com/google/jsonapi"
+  packages = ["."]
+  revision = "46d3ced0434461be12e555852e2f1a9ed382e139"
+  version = "1.0.0"
+
+[[projects]]
   name = "github.com/gosimple/slug"
   packages = ["."]
   revision = "e9f42fa127660e552d0ad2b589868d403a9be7c6"
@@ -130,6 +136,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "22812a1761091fe75ffb371241651f28e68d1e3522b0bac9d57d6910cdf0e1dc"
+  inputs-digest = "2b26b6911f0761e2ab960e01c7c30db09156af4d8e479d2808f1421d3475fa06"
   solver-name = "gps-cdcl"
   solver-version = 1

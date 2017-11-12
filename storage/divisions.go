@@ -4,9 +4,9 @@ import (
 	"context"
 	"encoding/json"
 
-	geojson "github.com/paulmach/go.geojson"
 	"github.com/populin/popul.in/constants"
 	es "github.com/populin/popul.in/elastic"
+	"github.com/populin/popul.in/geojson"
 	"github.com/populin/popul.in/request"
 	"gopkg.in/olivere/elastic.v5"
 )
@@ -30,8 +30,8 @@ func (storage *DivisionsStorage) FindOneByID(id string, showGeometry bool) (*geo
 	}
 
 	division, err := storage.client.Get().
-		Index(constants.Index).
-		Type(constants.Type).
+		Index(constants.ESIndexGeography).
+		Type(constants.ESTypeGeography).
 		FetchSourceContext(fsc).
 		Id(id).
 		Do(context.Background())
@@ -88,8 +88,8 @@ func (storage *DivisionsStorage) GetSearchResults(params request.SearchParamsExt
 	}
 
 	results, err := storage.client.Search().
-		Index(constants.Index).
-		Type(constants.Type).
+		Index(constants.ESIndexGeography).
+		Type(constants.ESTypeGeography).
 		From(int(params.GetFrom())).Size(int(params.GetSize())).
 		Query(query).
 		FetchSourceContext(fsc).
@@ -122,11 +122,11 @@ func unmarshalFeatureCollection(hits []*elastic.SearchHit) ([]*geojson.Feature, 
 func unmarshalFeature(message json.RawMessage, id string) (*geojson.Feature, error) {
 	feature, err := geojson.UnmarshalFeature(message)
 
+	feature.ID = id
+
 	if err != nil {
 		return nil, err
 	}
-
-	feature.SetProperty("slug", id)
 
 	return feature, nil
 }

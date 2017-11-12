@@ -15,6 +15,50 @@ import (
 	"gopkg.in/olivere/elastic.v5"
 )
 
+// Mapping is the ElasticSearch Mapping for divisions in geography
+const Mapping = `
+	{
+		"settings":{
+			"number_of_shards": 8,
+			"number_of_replicas": 0
+		},
+		"mappings":{
+			"division":{
+				"properties":{
+					"geometry": {
+						"type": "geo_shape"
+					},
+					"properties": {
+						"properties": {
+							"name": {
+							  "type": "string"
+							},
+							"administrativeLevel": {
+							  "type": "integer"
+							},
+							"administrativeName": {
+							  "type": "text",
+							  "fielddata": true
+							},
+							"code": {
+							  "type": "string"
+							},
+							"country": {
+							  "type": "string"
+							},
+							"isCity": {
+							  "type": "boolean"
+							},
+							"isCountry": {
+							  "type": "boolean"
+							}
+						}
+					}
+				}
+			}
+		}
+	}`
+
 func main() {
 	app := cli.NewApp()
 	app.Name = "importer"
@@ -52,8 +96,8 @@ func importFolder(c *cli.Context) error {
 
 		for _, feature := range collection.Features {
 			req := elastic.NewBulkIndexRequest().
-				Index(constants.Index).
-				Type(constants.Type).
+				Index(constants.ESIndexGeography).
+				Type(constants.ESTypeGeography).
 				Id(sluggify(feature)).
 				Doc(feature)
 
@@ -75,14 +119,14 @@ func getProcessor() (*elastic.BulkProcessor, error) {
 		return nil, err
 	}
 
-	exists, err := clt.IndexExists(constants.Index).Do(ctx)
+	exists, err := clt.IndexExists(constants.ESIndexGeography).Do(ctx)
 
 	if err != nil {
 		panic(err)
 	}
 
 	if exists {
-		deleteIndex, err := clt.DeleteIndex(constants.Index).Do(ctx)
+		deleteIndex, err := clt.DeleteIndex(constants.ESIndexGeography).Do(ctx)
 		if err != nil {
 			return nil, err
 		}
@@ -91,8 +135,8 @@ func getProcessor() (*elastic.BulkProcessor, error) {
 		}
 	}
 
-	createIndex, err := clt.CreateIndex(constants.Index).
-		BodyString(constants.Mapping).
+	createIndex, err := clt.CreateIndex(constants.ESIndexGeography).
+		BodyString(Mapping).
 		Do(ctx)
 	if err != nil {
 		return nil, err

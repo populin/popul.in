@@ -14,6 +14,7 @@ import (
 	"github.com/populin/popul.in/storage"
 )
 
+// ByID returns a Feature by its ID
 func ByID(c *gin.Context) {
 
 	ds := c.MustGet("DivisionsStorage").(*storage.DivisionsStorage)
@@ -43,6 +44,7 @@ func ByID(c *gin.Context) {
 	c.Writer.Write(r)
 }
 
+// Search parses the request to search for a Feature collection
 func Search(c *gin.Context) {
 	ds := c.MustGet("DivisionsStorage").(*storage.DivisionsStorage)
 

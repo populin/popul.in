@@ -20,5 +20,5 @@ before_script:
 
 script:
   - go install github.com/populin/popul.in/importer && importer data/geography/fixtures
-  - godog
+  - go test -race -v
   - gometalinter.v1 --config gometalinter.json ./...

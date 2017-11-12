@@ -7,61 +7,68 @@ Feature: get divisions
     Then the JSON response should be a valid GeoJson Feature
     And the response code should be 200
     And the response header "Content-Type" should be "application/geo+json; charset=utf-8"
-    And the GeoJSON property "slug" should be equal to "fr-region-centre-val-de-loire-5727539415420288060"
     And the GeoJSON property "name" should be equal to "Centre-Val de Loire"
     And the JSON should be valid according to this schema:
-    """
-    {
+      """
+      {
         "type": "object",
         "properties": {
-            "type": { "type": "string" },
-            "geometry": { "type": "object" },
+          "id": { "type": "string" },
+          "type": { "type": "string" },
+          "geometry": { "type": "object" },
+          "properties": {
+            "type": "object",
             "properties": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "enum": [
-                            "Centre-Val de Loire"
-                        ]
-                    }
-                }
+              "name": {
+                "type": "string",
+                "enum": [
+                  "Centre-Val de Loire"
+                ]
+              }
             }
+          }
         },
-        "required": ["type", "geometry", "properties"],
+        "required": ["id", "type", "geometry", "properties"],
         "additionalProperties": false
-    }
-    """
+      }
+      """
 
   Scenario: Get a known division
-    When I send a "GET" request to "/divisions/fr-region-centre-val-de-loire-5727539415420288060" accepting "application/ld+json"
+    When I send a "GET" request to "/divisions/fr-region-centre-val-de-loire-5727539415420288060" accepting "application/vnd.api+json"
     And the response code should be 200
-    And the response header "Content-Type" should be "application/ld+json; charset=utf-8"
-    And the GeoJSON property "slug" should be equal to "fr-region-centre-val-de-loire-5727539415420288060"
-    And the GeoJSON property "name" should be equal to "Centre-Val de Loire"
+    And the response header "Content-Type" should be "application/vnd.api+json; charset=utf-8"
     And the JSON should be valid according to this schema:
-    """
-    {
+      """
+      {
         "type": "object",
         "properties": {
-            "type": { "type": "string" },
-            "geometry": { "type": "null" },
+          "data": {
+            "type": "object",
             "properties": {
+              "id": {"type": "string"},
+              "type": {"type": "string"},
+              "attributes": {
                 "type": "object",
                 "properties": {
+                  "properties": {
                     "name": {
-                        "type": "string",
-                        "enum": [
-                            "Centre-Val de Loire"
-                        ]
+                      "type": "string",
+                      "enum": [
+                        "Centre-Val de Loire"
+                      ]
                     }
+                  }
                 }
-            }
+              }
+            },
+            "required": ["type", "id", "attributes"],
+            "additionalProperties": false
+          }
         },
-        "required": ["type", "geometry", "properties"],
+        "required": ["data"],
         "additionalProperties": false
-    }
-    """
+      }
+      """
 
   Scenario: Get an unknown division
     When I send a "GET" request to "/divisions/not-found" accepting "application/geo+json"

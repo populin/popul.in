@@ -46,9 +46,10 @@ func Setup(ESClient *elastic.Client) *gin.Engine {
 	router.HandleMethodNotAllowed = true
 
 	// global middlewares
+	router.Use(gin.Recovery())
 	router.Use(middlewares.CORS())
 
-	divisions := router.Group("/divisions", middlewares.Negotiate(constants.GeoJSON, constants.JSONLD))
+	divisions := router.Group("/divisions", middlewares.Negotiate(constants.GeoJSON, constants.JSONAPI))
 	{
 		divisions.GET("/:id", handlers.ByID)
 		divisions.GET("", handlers.Search)
