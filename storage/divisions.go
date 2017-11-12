@@ -58,7 +58,7 @@ func (storage *DivisionsStorage) GetGeoShapeQuery(lat float64, lon float64, radi
 }
 
 // GetSearchResults returns a FeatureCollection from a BoolQuery
-func (storage *DivisionsStorage) GetSearchResults(params request.SearchParamsExtractor) (*geojson.FeatureCollection, int64, error) {
+func (storage *DivisionsStorage) GetSearchResults(params request.SearchParamsExtractor, showGeometry bool) ([]*geojson.Feature, int64, error) {
 	query := elastic.NewBoolQuery()
 
 	if lat, lon, err := params.GetLatAndLon(); err == nil {
@@ -83,7 +83,7 @@ func (storage *DivisionsStorage) GetSearchResults(params request.SearchParamsExt
 	}
 
 	var fsc *elastic.FetchSourceContext
-	if !params.GetGeometry() {
+	if !showGeometry {
 		fsc = elastic.NewFetchSourceContext(true).Exclude("geometry")
 	}
 
@@ -104,19 +104,19 @@ func (storage *DivisionsStorage) GetSearchResults(params request.SearchParamsExt
 	return collection, results.TotalHits(), err
 }
 
-func unmarshalFeatureCollection(hits []*elastic.SearchHit) (*geojson.FeatureCollection, error) {
-	collection := geojson.NewFeatureCollection()
+func unmarshalFeatureCollection(hits []*elastic.SearchHit) ([]*geojson.Feature, error) {
+	var features []*geojson.Feature
 	for _, division := range hits {
 		feature, err := unmarshalFeature(*division.Source, division.Id)
 
 		if err != nil {
-			return nil, err
+			return features, err
 		}
 
-		collection.AddFeature(feature)
+		features = append(features, feature)
 	}
 
-	return collection, nil
+	return features, nil
 }
 
 func unmarshalFeature(message json.RawMessage, id string) (*geojson.Feature, error) {

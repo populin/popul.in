@@ -17,7 +17,6 @@ type searchParams struct {
 	Longitude    float64    `form:"longitude"`
 	Latitude     float64    `form:"latitude"`
 	Radius       uint64     `form:"radius"`
-	Geometry     bool       `form:"geometry"`
 	Properties   Properties `form:"properties"`
 	From         uint       `form:"from"`
 	Size         uint       `form:"size"`
@@ -59,11 +58,6 @@ func (e *SearchParamsExtractor) GetIsCity() (bool, error) {
 	}
 
 	return e.params.Properties.IsCity, nil
-}
-
-// GetGeometry returns the geometry boolean param
-func (e *SearchParamsExtractor) GetGeometry() bool {
-	return e.params.Geometry
 }
 
 // GetFrom returns the first item to return

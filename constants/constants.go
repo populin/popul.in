@@ -1,6 +1,8 @@
 package constants
 
 const (
+	GeoJSON = "application/geo+json"
+	JSONLD  = "application/ld+json"
 	// Index is the ElasticSearch Index
 	Index = "geography"
 	// Type is the ElasticSearch Type

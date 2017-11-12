@@ -53,8 +53,10 @@ func (a *apiFeature) resetResponse(interface{}) {
 	a.app = api.Setup(clt)
 }
 
-func (a *apiFeature) iSendARequestTo(method string, endpoint string) (err error) {
+func (a *apiFeature) iSendARequestToAccepting(method string, endpoint string, accept string) (err error) {
 	req, _ := http.NewRequest(method, endpoint, nil)
+
+	req.Header.Set("Accept", accept)
 
 	a.app.ServeHTTP(a.resp, req)
 
@@ -174,7 +176,7 @@ func FeatureContext(s *godog.Suite) {
 
 	s.BeforeScenario(apiFeature.resetResponse)
 
-	s.Step(`^I send a "(GET|POST|PUT|DELETE)" request to "([^"]*)"$`, apiFeature.iSendARequestTo)
+	s.Step(`^I send a "(GET|POST|PUT|DELETE)" request to "([^"]*)" accepting "([^"]*)"$`, apiFeature.iSendARequestToAccepting)
 	s.Step(`^the response code should be (\d+)$`, apiFeature.theResponseCodeShouldBe)
 	s.Step(`^the response header "([^"]*)" should be "([^"]*)"$`, apiFeature.theResponseHeaderShouldBe)
 	s.Step(`^the response header "([^"]*)" should exist$`, apiFeature.theResponseHeaderShouldExist)

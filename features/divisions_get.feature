@@ -3,7 +3,7 @@ Feature: get divisions
   I need to do a GET request on the right url
 
   Scenario: Get a known division
-    When I send a "GET" request to "/divisions/fr-region-centre-val-de-loire-5727539415420288060"
+    When I send a "GET" request to "/divisions/fr-region-centre-val-de-loire-5727539415420288060" accepting "application/geo+json"
     Then the JSON response should be a valid GeoJson Feature
     And the response code should be 200
     And the response header "Content-Type" should be "application/geo+json; charset=utf-8"
@@ -34,10 +34,9 @@ Feature: get divisions
     """
 
   Scenario: Get a known division
-    When I send a "GET" request to "/divisions/fr-region-centre-val-de-loire-5727539415420288060?geometry=false"
-    Then the JSON response should be a valid GeoJson Feature
+    When I send a "GET" request to "/divisions/fr-region-centre-val-de-loire-5727539415420288060" accepting "application/ld+json"
     And the response code should be 200
-    And the response header "Content-Type" should be "application/geo+json; charset=utf-8"
+    And the response header "Content-Type" should be "application/ld+json; charset=utf-8"
     And the GeoJSON property "slug" should be equal to "fr-region-centre-val-de-loire-5727539415420288060"
     And the GeoJSON property "name" should be equal to "Centre-Val de Loire"
     And the JSON should be valid according to this schema:
@@ -65,7 +64,7 @@ Feature: get divisions
     """
 
   Scenario: Get an unknown division
-    When I send a "GET" request to "/divisions/not-found"
+    When I send a "GET" request to "/divisions/not-found" accepting "application/geo+json"
     Then the response code should be 404
     And the error message should be "Division not-found not found"
     And the response header "Content-Type" should be "application/json; charset=utf-8"

@@ -5,6 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
+	"github.com/populin/popul.in/constants"
 	"github.com/populin/popul.in/handlers"
 	"github.com/populin/popul.in/middlewares"
 	"github.com/populin/popul.in/storage"
@@ -36,7 +37,6 @@ func Setup(ESClient *elastic.Client) *gin.Engine {
 
 	router.Use(func(c *gin.Context) {
 		c.Set("DivisionsStorage", storage.New(ESClient))
-
 		c.Next()
 	})
 
@@ -45,14 +45,13 @@ func Setup(ESClient *elastic.Client) *gin.Engine {
 	router.NoMethod(handlers.Error(http.StatusMethodNotAllowed, errors.New("Method not allowed")))
 	router.HandleMethodNotAllowed = true
 
-	// middlewares
+	// global middlewares
 	router.Use(middlewares.CORS())
-	router.Use(middlewares.GeoJSON())
 
-	divisions := router.Group("/divisions")
+	divisions := router.Group("/divisions", middlewares.Negotiate(constants.GeoJSON, constants.JSONLD))
 	{
-		divisions.GET("/:id", byID)
-		divisions.GET("", search)
+		divisions.GET("/:id", handlers.ByID)
+		divisions.GET("", handlers.Search)
 	}
 
 	return router
