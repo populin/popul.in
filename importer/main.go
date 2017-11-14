@@ -43,13 +43,13 @@ const Mapping = `
 							"code": {
 							  "type": "string"
 							},
-							"country": {
+							"countryCode": {
 							  "type": "string"
 							},
-							"isCity": {
+							"city": {
 							  "type": "boolean"
 							},
-							"isCountry": {
+							"country": {
 							  "type": "boolean"
 							}
 						}
@@ -157,7 +157,7 @@ func sluggify(feature *geojson.Feature) string {
 
 	slug, err := slugger.Sluggify(
 		[]string{
-			feature.PropertyMustString("country"),
+			feature.PropertyMustString("countryCode"),
 			feature.PropertyMustString("administrativeName"),
 			feature.PropertyMustString("name"),
 		},

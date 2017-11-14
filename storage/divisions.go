@@ -7,7 +7,6 @@ import (
 	"github.com/populin/popul.in/constants"
 	es "github.com/populin/popul.in/elastic"
 	"github.com/populin/popul.in/geojson"
-	"github.com/populin/popul.in/request"
 	"gopkg.in/olivere/elastic.v5"
 )
 
@@ -58,29 +57,7 @@ func (storage *DivisionsStorage) GetGeoShapeQuery(lat float64, lon float64, radi
 }
 
 // GetSearchResults returns a FeatureCollection from a BoolQuery
-func (storage *DivisionsStorage) GetSearchResults(params request.SearchParamsExtractor, showGeometry bool) ([]*geojson.Feature, int64, error) {
-	query := elastic.NewBoolQuery()
-
-	if lat, lon, err := params.GetLatAndLon(); err == nil {
-		radius := params.GetRadius()
-		query.Must(storage.GetGeoShapeQuery(lat, lon, radius))
-	}
-
-	if isCity, err := params.GetIsCity(); err == nil {
-		query.Filter(elastic.NewTermQuery("properties.isCity", isCity))
-	}
-
-	if searchString, err := params.GetSearchString(); err == nil {
-		query.Must(elastic.NewMultiMatchQuery(searchString, "properties.name^3", "properties.code^2"))
-	}
-
-	if administrativeName, err := params.GetAdministrativeName(); err == nil {
-		query.Must(elastic.NewMatchQuery("properties.administrativeName", administrativeName))
-	}
-
-	if country, err := params.GetCountry(); err == nil {
-		query.Must(elastic.NewMatchPhraseQuery("properties.country", country))
-	}
+func (storage *DivisionsStorage) GetSearchResults(query elastic.Query, from int, size int, showGeometry bool) ([]*geojson.Feature, int64, error) {
 
 	var fsc *elastic.FetchSourceContext
 	if !showGeometry {
@@ -90,7 +67,8 @@ func (storage *DivisionsStorage) GetSearchResults(params request.SearchParamsExt
 	results, err := storage.client.Search().
 		Index(constants.ESIndexGeography).
 		Type(constants.ESTypeGeography).
-		From(int(params.GetFrom())).Size(int(params.GetSize())).
+		From(from).
+		Size(size).
 		Query(query).
 		FetchSourceContext(fsc).
 		Do(context.Background())

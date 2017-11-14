@@ -3894,9 +3894,9 @@
         "administrativeLevel": 3,
         "administrativeName": "arrondissement",
         "code": "41001",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Blois"
       }
     },
@@ -9141,9 +9141,9 @@
         "administrativeLevel": 3,
         "administrativeName": "arrondissement",
         "code": "72001",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Flèche"
       }
     },
@@ -13716,9 +13716,9 @@
         "administrativeLevel": 3,
         "administrativeName": "arrondissement",
         "code": "37002",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Tours"
       }
     },
@@ -17019,9 +17019,9 @@
         "administrativeLevel": 3,
         "administrativeName": "arrondissement",
         "code": "37003",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Loches"
       }
     },
@@ -20586,9 +20586,9 @@
         "administrativeLevel": 3,
         "administrativeName": "arrondissement",
         "code": "37001",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Chinon"
       }
     },
@@ -24369,9 +24369,9 @@
         "administrativeLevel": 3,
         "administrativeName": "arrondissement",
         "code": "41002",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Vendôme"
       }
     }

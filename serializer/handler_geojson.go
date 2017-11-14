@@ -5,6 +5,7 @@ import (
 
 	"fmt"
 
+	"github.com/gin-gonic/gin"
 	"github.com/populin/popul.in/constants"
 	"github.com/populin/popul.in/geojson"
 )
@@ -18,7 +19,7 @@ func (GeoJSONHandler) Supports(format string) bool {
 }
 
 // Handle marshal the data (from FormatHandler interface)
-func (GeoJSONHandler) Handle(o interface{}) ([]byte, error) {
+func (GeoJSONHandler) Handle(c *gin.Context, o interface{}) ([]byte, error) {
 	if features, ok := o.([]*geojson.Feature); ok {
 		c := geojson.NewFeatureCollection()
 		for _, feature := range features {

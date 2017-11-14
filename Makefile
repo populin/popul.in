@@ -23,7 +23,7 @@ run:
 	@$(EXEC_POPULIN) bash -c "go build && ./popul.in"
 
 test: 
-	@$(EXEC_POPULIN) bash -c "go test -race -v"
+	@$(EXEC_POPULIN) bash -c "godog"
 
 lint: 
 	@$(EXEC_POPULIN) bash -c "gometalinter.v1 --config gometalinter.json ./..."

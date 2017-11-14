@@ -782,9 +782,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37003",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Bléré"
       }
     },
@@ -2093,9 +2093,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37004",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Château-Renault"
       }
     },
@@ -3084,9 +3084,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37009",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Loches"
       }
     },
@@ -3411,9 +3411,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37012",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Saint-Cyr-sur-Loire"
       }
     },
@@ -3562,9 +3562,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37014",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Saint-Pierre-des-Corps"
       }
     },
@@ -3689,9 +3689,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37018",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Tours-4"
       }
     },
@@ -4296,9 +4296,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37011",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Monts"
       }
     },
@@ -4423,9 +4423,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37017",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Tours-3"
       }
     },
@@ -4742,9 +4742,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37002",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Ballan-Miré"
       }
     },
@@ -5845,9 +5845,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37006",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Descartes"
       }
     },
@@ -6056,9 +6056,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37007",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Joué-lès-Tours"
       }
     },
@@ -6139,9 +6139,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37016",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Tours-2"
       }
     },
@@ -6638,9 +6638,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37019",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Vouvray"
       }
     },
@@ -7265,9 +7265,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37001",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Amboise"
       }
     },
@@ -8192,9 +8192,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37005",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Chinon"
       }
     },
@@ -9051,9 +9051,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37008",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Langeais"
       }
     },
@@ -9394,9 +9394,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37010",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Montlouis-sur-Loire"
       }
     },
@@ -10261,9 +10261,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37013",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Sainte-Maure-de-Touraine"
       }
     },
@@ -10380,9 +10380,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "37015",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Tours-1"
       }
     },
@@ -11687,9 +11687,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "41006",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Montoire-sur-le-Loir"
       }
     },
@@ -12554,9 +12554,9 @@
         "administrativeLevel": 4,
         "administrativeName": "canton",
         "code": "72008",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Lude"
       }
     }
