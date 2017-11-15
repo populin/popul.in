@@ -36,7 +36,7 @@ func Setup(ESClient *elastic.Client) *gin.Engine {
 	}
 
 	router.Use(func(c *gin.Context) {
-		c.Set("DivisionsStorage", storage.New(ESClient))
+		c.Set("divisions_storage", storage.New(ESClient))
 		c.Next()
 	})
 
@@ -52,7 +52,7 @@ func Setup(ESClient *elastic.Client) *gin.Engine {
 	divisions := router.Group("/divisions", middlewares.Negotiate(constants.GeoJSON, constants.JSONAPI))
 	{
 		divisions.GET("/:id", handlers.ByID)
-		divisions.GET("", handlers.Search)
+		divisions.GET("", middlewares.Pagination(), handlers.Search)
 	}
 
 	return router

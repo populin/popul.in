@@ -13,7 +13,7 @@ type Serializer struct {
 // FormatHandler defines the behavior of a handler
 type FormatHandler interface {
 	Supports(format string) bool
-	Handle(o interface{}) ([]byte, error)
+	Handle(c *gin.Context, o interface{}) ([]byte, error)
 }
 
 // NewSerializer is the factory of Serializer
@@ -31,7 +31,7 @@ func NewSerializer() Serializer {
 func (s Serializer) Serialize(c *gin.Context, o interface{}) ([]byte, error) {
 	for _, handler := range s.handlers {
 		if handler.Supports(c.GetHeader("Accept")) {
-			return handler.Handle(o)
+			return handler.Handle(c, o)
 		}
 	}
 

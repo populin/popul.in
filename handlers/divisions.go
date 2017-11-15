@@ -4,20 +4,19 @@ import (
 	"fmt"
 	"net/http"
 
-	"strconv"
-
 	"github.com/gin-gonic/gin"
-	"github.com/go-playground/form"
 	"github.com/populin/popul.in/constants"
+	"github.com/populin/popul.in/filters"
 	"github.com/populin/popul.in/request"
 	"github.com/populin/popul.in/serializer"
 	"github.com/populin/popul.in/storage"
+	"gopkg.in/olivere/elastic.v5"
 )
 
 // ByID returns a Feature by its ID
 func ByID(c *gin.Context) {
 
-	ds := c.MustGet("DivisionsStorage").(*storage.DivisionsStorage)
+	ds := c.MustGet("divisions_storage").(*storage.DivisionsStorage)
 
 	id := c.Param("id")
 
@@ -44,32 +43,57 @@ func ByID(c *gin.Context) {
 	c.Writer.Write(r)
 }
 
-// Search parses the request to search for a Feature collection
+// Search parses the request to search for features
 func Search(c *gin.Context) {
-	ds := c.MustGet("DivisionsStorage").(*storage.DivisionsStorage)
+	ds := c.MustGet("divisions_storage").(*storage.DivisionsStorage)
+	p := c.MustGet("pagination").(*request.Pagination)
 
-	params, err := request.NewSearchParamsExtractor(c)
+	showGeometry := false
+	var sorting elastic.Sorter
 
-	if err != nil {
-		decodeErrors := err.(form.DecodeErrors)
-		ValidationError(http.StatusBadRequest, decodeErrors)(c)
+	if c.GetHeader("Accept") == constants.GeoJSON {
+		showGeometry = true
+		sorting = elastic.NewFieldSort("properties.administrativeLevel")
+	} else {
+		sorting = elastic.NewScoreSort()
+	}
+
+	f := filters.NewAggregator(
+		c.Request.URL.Query(),
+		filters.NewFeatureCoordinatesFilter(),
+		filters.NewCityFilter(),
+		filters.NewSearchFilter(),
+	)
+
+	query := elastic.NewBoolQuery()
+
+	errs := f.Filter(query)
+
+	if len(errs) > 0 {
+		ValidationError(http.StatusBadRequest, errs)(c)
+		c.Abort()
 		return
 	}
 
-	showGeometry := c.GetHeader("Accept") == constants.GeoJSON
+	features, total, err := ds.GetSearchResults(
+		query,
+		sorting,
+		int((p.Page-1)*p.Size),
+		int(p.Size),
+		showGeometry,
+	)
 
-	collection, total, err := ds.GetSearchResults(params, showGeometry)
+	p.TotalItems = uint(total)
 
 	if err != nil {
 		Error(http.StatusServiceUnavailable, err)(c)
+		c.Abort()
 		return
 	}
 
-	c.Header("X-Total-Results", strconv.FormatInt(total, 10))
-
 	s := serializer.NewSerializer()
 
-	r, err := s.Serialize(c, collection)
+	r, err := s.Serialize(c, features)
 
 	if err != nil {
 		Error(http.StatusBadRequest, err)(c)

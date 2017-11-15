@@ -22040,9 +22040,9 @@
         "administrativeLevel": 1,
         "administrativeName": "région",
         "code": "52",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "iso": {
           "type": "3166-2",
           "value": "FR-PDL"
@@ -40507,9 +40507,9 @@
         "administrativeLevel": 1,
         "administrativeName": "région",
         "code": "24",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "iso": {
           "type": "3166-2",
           "value": "FR-CVL"

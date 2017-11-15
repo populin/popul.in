@@ -25079,13 +25079,13 @@
       "properties": {
         "administrativeLevel": 0,
         "administrativeName": "pays",
-        "isCity": false,
-        "isCountry": true,
+        "city": false,
+        "country": true,
         "iso": {
           "type": "3166-2",
           "value": "FR"
         },
-        "country": "FR",
+        "countryCode": "FR",
         "code": "FR",
         "name": "France"
       }

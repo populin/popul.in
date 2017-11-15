@@ -23,10 +23,14 @@ run:
 	@$(EXEC_POPULIN) bash -c "go build && ./popul.in"
 
 test: 
-	@$(EXEC_POPULIN) bash -c "go test -race -v"
+	@$(EXEC_POPULIN) bash -c "godog"
 
 lint: 
 	@$(EXEC_POPULIN) bash -c "gometalinter.v1 --config gometalinter.json ./..."
+
+fix:
+	@$(EXEC_POPULIN) bash -c "gofmt -s -w ."
+	@$(EXEC_POPULIN) bash -c "goimports -w ."
 
 import-fixtures: 
 	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/importer && importer data/geography/fixtures"

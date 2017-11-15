@@ -41,9 +41,10 @@ Feature: get divisions
                 "required": ["id", "type", "attributes"],
                 "additionalProperties": false
               }
-            }
+            },
+            "links": { "type": "object" }
           },
-          "required": ["data"],
+          "required": ["data", "links"],
           "additionalProperties": false
       }
       """
@@ -105,9 +106,10 @@ Feature: get divisions
                 "required": ["id", "type", "attributes"],
                 "additionalProperties": false
               }
-            }
+            },
+            "links": { "type": "object" }
           },
-          "required": ["data"],
+          "required": ["data", "links"],
           "additionalProperties": false
       }
       """
@@ -201,7 +203,7 @@ Feature: get divisions
       """
 
   Scenario: Get only cities by coordinates without the full geometry
-    When I send a "GET" request to "/divisions?latitude=47.394405&longitude=0.681738&properties.isCity=1" accepting "application/vnd.api+json"
+    When I send a "GET" request to "/divisions?latitude=47.394405&longitude=0.681738&city=1" accepting "application/vnd.api+json"
     And the response code should be 200
     And the response header "Content-Type" should be "application/vnd.api+json; charset=utf-8"
     And the JSON should be valid according to this schema:
@@ -227,7 +229,7 @@ Feature: get divisions
                                       "type": "string",
                                       "enum": [ "Tours" ]
                                   },
-                                  "isCity": {
+                                  "city": {
                                       "type": "boolean",
                                       "enum": [ true ]
                                   }
@@ -291,11 +293,10 @@ Feature: get divisions
       """
 
   Scenario: Get divisions with pagination
-    When I send a "GET" request to "/divisions?from=0&size=3" accepting "application/geo+json"
+    When I send a "GET" request to "/divisions?page[number]=1&page[size]=3" accepting "application/geo+json"
     Then the JSON response should be a valid GeoJson Feature Collection
     And the response code should be 200
     And the response header "Content-Type" should be "application/geo+json; charset=utf-8"
-    And the response header "X-Total-Results" should exist
     And the JSON should be valid according to this schema:
       """
       {
