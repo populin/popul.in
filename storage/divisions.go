@@ -57,7 +57,7 @@ func (storage *DivisionsStorage) GetGeoShapeQuery(lat float64, lon float64, radi
 }
 
 // GetSearchResults returns a FeatureCollection from a BoolQuery
-func (storage *DivisionsStorage) GetSearchResults(query elastic.Query, from int, size int, showGeometry bool) ([]*geojson.Feature, int64, error) {
+func (storage *DivisionsStorage) GetSearchResults(query elastic.Query, sorter elastic.Sorter, from int, size int, showGeometry bool) ([]*geojson.Feature, int64, error) {
 
 	var fsc *elastic.FetchSourceContext
 	if !showGeometry {
@@ -70,6 +70,7 @@ func (storage *DivisionsStorage) GetSearchResults(query elastic.Query, from int,
 		From(from).
 		Size(size).
 		Query(query).
+		SortBy(sorter).
 		FetchSourceContext(fsc).
 		Do(context.Background())
 

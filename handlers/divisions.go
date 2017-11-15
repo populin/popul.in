@@ -48,7 +48,15 @@ func Search(c *gin.Context) {
 	ds := c.MustGet("divisions_storage").(*storage.DivisionsStorage)
 	p := c.MustGet("pagination").(*request.Pagination)
 
-	showGeometry := c.GetHeader("Accept") == constants.GeoJSON
+	showGeometry := false
+	var sorting elastic.Sorter
+
+	if c.GetHeader("Accept") == constants.GeoJSON {
+		showGeometry = true
+		sorting = elastic.NewFieldSort("properties.administrativeLevel")
+	} else {
+		sorting = elastic.NewScoreSort()
+	}
 
 	f := filters.NewAggregator(
 		c.Request.URL.Query(),
@@ -69,6 +77,7 @@ func Search(c *gin.Context) {
 
 	features, total, err := ds.GetSearchResults(
 		query,
+		sorting,
 		int((p.Page-1)*p.Size),
 		int(p.Size),
 		showGeometry,
