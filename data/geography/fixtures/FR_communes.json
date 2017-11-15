@@ -306,10 +306,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37360",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37206",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Antoine-du-Rocher"
       }
     },
@@ -582,10 +582,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37236",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Règle"
       }
     },
@@ -950,10 +950,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37220",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37178",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Panzoult"
       }
     },
@@ -1266,10 +1266,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37190",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37200",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Rivarennes"
       }
     },
@@ -1542,10 +1542,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37190",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37099",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Druye"
       }
     },
@@ -1694,10 +1694,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37016",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Azay-sur-Indre"
       }
     },
@@ -2058,10 +2058,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37085",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Courçay"
       }
     },
@@ -2326,10 +2326,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37190",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37165",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Neuil"
       }
     },
@@ -2654,10 +2654,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37320",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37104",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Esvres"
       }
     },
@@ -2866,10 +2866,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37380",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37092",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Crotelles"
       }
     },
@@ -3114,10 +3114,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37320",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37263",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Truyes"
       }
     },
@@ -3398,10 +3398,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37330",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37084",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Couesmes"
       }
     },
@@ -3654,10 +3654,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37274",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Villebourg"
       }
     },
@@ -3982,10 +3982,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37500",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37210",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Benoît-la-Forêt"
       }
     },
@@ -4182,10 +4182,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37510",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37025",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Berthenay"
       }
     },
@@ -4390,10 +4390,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37135",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Louestault"
       }
     },
@@ -4626,10 +4626,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37253",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Sublaines"
       }
     },
@@ -4962,10 +4962,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37192",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Reignac-sur-Indre"
       }
     },
@@ -5254,10 +5254,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37340",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37081",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Cléré-les-Pins"
       }
     },
@@ -5566,10 +5566,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37380",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37194",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Reugny"
       }
     },
@@ -5806,10 +5806,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37160",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Morand"
       }
     },
@@ -6054,10 +6054,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37210",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37179",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Parçay-Meslay"
       }
     },
@@ -6494,10 +6494,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37010",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Auzouer-en-Touraine"
       }
     },
@@ -6738,10 +6738,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37163",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Nazelles-Négron"
       }
     },
@@ -7150,10 +7150,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37260",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37257",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Thilouze"
       }
     },
@@ -7398,10 +7398,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37049",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chambourg-sur-Indre"
       }
     },
@@ -7638,10 +7638,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37077",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Cinq-Mars-la-Pile"
       }
     },
@@ -7942,10 +7942,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37330",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37062",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Château-la-Vallière"
       }
     },
@@ -8098,10 +8098,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37270",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37267",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Véretz"
       }
     },
@@ -8630,10 +8630,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37400",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37003",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Amboise"
       }
     },
@@ -8886,10 +8886,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37510",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37243",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Savonnières"
       }
     },
@@ -9102,10 +9102,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37128",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Lignières-de-Touraine"
       }
     },
@@ -9474,10 +9474,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37360",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37245",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Semblançay"
       }
     },
@@ -9806,10 +9806,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37360",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37167",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Neuillé-Pont-Pierre"
       }
     },
@@ -10110,10 +10110,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37210",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37203",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Rochecorbon"
       }
     },
@@ -10302,10 +10302,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37131",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Limeray"
       }
     },
@@ -10702,10 +10702,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37380",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37153",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Monnaie"
       }
     },
@@ -10918,10 +10918,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37390",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37047",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Cerelles"
       }
     },
@@ -11222,10 +11222,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37240",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37143",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Manthelan"
       }
     },
@@ -11634,10 +11634,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37276",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Villedômer"
       }
     },
@@ -11938,10 +11938,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37360",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37204",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Rouziers-de-Touraine"
       }
     },
@@ -12162,10 +12162,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37041",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Bueil-en-Touraine"
       }
     },
@@ -12546,10 +12546,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37340",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37002",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Ambillou"
       }
     },
@@ -12910,10 +12910,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37380",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37175",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Nouzilly"
       }
     },
@@ -13190,10 +13190,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37250",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37250",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Sorigny"
       }
     },
@@ -13390,10 +13390,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37210",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37171",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Noizay"
       }
     },
@@ -13666,10 +13666,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37390",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37152",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Mettray"
       }
     },
@@ -13846,10 +13846,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37063",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Château-Renault"
       }
     },
@@ -14162,10 +14162,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37158",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Montreuil-en-Touraine"
       }
     },
@@ -14314,10 +14314,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37150",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37070",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chenonceaux"
       }
     },
@@ -14446,10 +14446,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37510",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37219",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Genouph"
       }
     },
@@ -14766,10 +14766,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37380",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37166",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Neuillé-le-Lierre"
       }
     },
@@ -14978,10 +14978,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37150",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37096",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Dierre"
       }
     },
@@ -15334,10 +15334,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37330",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37251",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Souvigné"
       }
     },
@@ -15610,10 +15610,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37220",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37012",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Avon-les-Roches"
       }
     },
@@ -15890,10 +15890,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37075",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Cigogné"
       }
     },
@@ -16102,10 +16102,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37260",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37186",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Pont-de-Ruan"
       }
     },
@@ -16318,10 +16318,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37260",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37278",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Villeperdue"
       }
     },
@@ -16594,10 +16594,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37009",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Autrèche"
       }
     },
@@ -16766,10 +16766,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37056",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chapelle-aux-Naux"
       }
     },
@@ -17058,10 +17058,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37230",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Ouen-les-Vignes"
       }
     },
@@ -17202,10 +17202,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37520",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37195",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Riche"
       }
     },
@@ -17666,10 +17666,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37250",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37266",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Veigné"
       }
     },
@@ -17938,10 +17938,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37270",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37225",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Martin-le-Beau"
       }
     },
@@ -18150,10 +18150,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37390",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37059",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Charentilly"
       }
     },
@@ -18390,10 +18390,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37106",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Ferrière"
       }
     },
@@ -18810,10 +18810,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37230",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37139",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Luynes"
       }
     },
@@ -19198,10 +19198,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37300",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37122",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Joué-lès-Tours"
       }
     },
@@ -19510,10 +19510,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37260",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37159",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Monts"
       }
     },
@@ -19882,10 +19882,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37270",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37008",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Athée-sur-Cher"
       }
     },
@@ -20238,10 +20238,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37170",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Neuvy-le-Roi"
       }
     },
@@ -20386,10 +20386,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37209",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Bauld"
       }
     },
@@ -20694,10 +20694,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37210",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37270",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Vernou-sur-Brenne"
       }
     },
@@ -20950,10 +20950,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37150",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37079",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Civray-de-Touraine"
       }
     },
@@ -21062,10 +21062,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37400",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37138",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Lussault-sur-Loire"
       }
     },
@@ -21478,10 +21478,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37227",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Michel-sur-Loire"
       }
     },
@@ -21778,10 +21778,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37116",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Hermites"
       }
     },
@@ -22170,10 +22170,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37260",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37006",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Artannes-sur-Indre"
       }
     },
@@ -22570,10 +22570,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37360",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37249",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Sonzay"
       }
     },
@@ -22910,10 +22910,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37155",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Monthodon"
       }
     },
@@ -23314,10 +23314,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37123",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Langeais"
       }
     },
@@ -23778,10 +23778,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37340",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37013",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Avrillé-les-Ponceaux"
       }
     },
@@ -23966,10 +23966,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37330",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37037",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Brèches"
       }
     },
@@ -24330,10 +24330,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37800",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37226",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Sainte-Maure-de-Touraine"
       }
     },
@@ -24502,10 +24502,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37390",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37151",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Membrolle-sur-Choisille"
       }
     },
@@ -24774,10 +24774,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37150",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Mazières-de-Touraine"
       }
     },
@@ -24990,10 +24990,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37230",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37182",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Pernay"
       }
     },
@@ -25190,10 +25190,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37060",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chargé"
       }
     },
@@ -25382,10 +25382,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37190",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37271",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Villaines-les-Rochers"
       }
     },
@@ -25706,10 +25706,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37252",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Souvigny-de-Touraine"
       }
     },
@@ -26074,10 +26074,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37254",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Tauxigny"
       }
     },
@@ -26550,10 +26550,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37101",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Épeigné-sur-Dême"
       }
     },
@@ -26810,10 +26810,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37170",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37050",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chambray-lès-Tours"
       }
     },
@@ -27006,10 +27006,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37169",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Neuville-sur-Brenne"
       }
     },
@@ -27266,10 +27266,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37066",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chédigny"
       }
     },
@@ -27506,10 +27506,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37150",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37110",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Francueil"
       }
     },
@@ -27906,10 +27906,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37190",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37205",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saché"
       }
     },
@@ -28298,10 +28298,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37240",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saunay"
       }
     },
@@ -28538,10 +28538,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37340",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37241",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Savigné-sur-Lathan"
       }
     },
@@ -28842,10 +28842,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37213",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Christophe-sur-le-Nais"
       }
     },
@@ -29210,10 +29210,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37230",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37109",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Fondettes"
       }
     },
@@ -29498,10 +29498,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37320",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37134",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Louans"
       }
     },
@@ -29786,10 +29786,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37340",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37117",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Hommes"
       }
     },
@@ -29986,10 +29986,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37700",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37273",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Ville-aux-Dames"
       }
     },
@@ -30290,10 +30290,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37150",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37141",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Luzillé"
       }
     },
@@ -30454,10 +30454,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37550",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37208",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Avertin"
       }
     },
@@ -30726,10 +30726,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37210",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37281",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Vouvray"
       }
     },
@@ -30902,10 +30902,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37320",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37083",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Cormery"
       }
     },
@@ -31174,10 +31174,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37390",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37054",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chanceaux-sur-Choisille"
       }
     },
@@ -31598,10 +31598,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37800",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37216",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Épain"
       }
     },
@@ -31882,10 +31882,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37510",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37018",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Ballan-Miré"
       }
     },
@@ -32190,10 +32190,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37043",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Cangey"
       }
     },
@@ -32538,10 +32538,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37110",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37030",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Boulay"
       }
     },
@@ -32822,10 +32822,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37230",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37217",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Étienne-de-Chigny"
       }
     },
@@ -33202,10 +33202,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37190",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37014",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Azay-le-Rideau"
       }
     },
@@ -33462,10 +33462,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37540",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37214",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Cyr-sur-Loire"
       }
     },
@@ -33910,10 +33910,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37068",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chemillé-sur-Dême"
       }
     },
@@ -34282,10 +34282,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "41310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "41007",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Authon"
       }
     },
@@ -34526,10 +34526,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37270",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37015",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Azay-sur-Cher"
       }
     },
@@ -34794,10 +34794,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37190",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37264",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Vallères"
       }
     },
@@ -35150,10 +35150,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37231",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Paterne-Racan"
       }
     },
@@ -35478,10 +35478,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37510",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37272",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Villandry"
       }
     },
@@ -35898,10 +35898,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37380",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37224",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Laurent-en-Gâtines"
       }
     },
@@ -36170,10 +36170,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37097",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Dolus-le-Sec"
       }
     },
@@ -36418,10 +36418,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37270",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37156",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Montlouis-sur-Loire"
       }
     },
@@ -36858,10 +36858,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "72500",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "72077",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chenu"
       }
     },
@@ -37114,10 +37114,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37270",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37124",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Larçay"
       }
     },
@@ -37498,10 +37498,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37320",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37211",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Branchs"
       }
     },
@@ -37698,10 +37698,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37220",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37090",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Crissay-sur-Manse"
       }
     },
@@ -37894,10 +37894,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37390",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37237",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Roch"
       }
     },
@@ -38182,10 +38182,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37250",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37154",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Montbazon"
       }
     },
@@ -38402,10 +38402,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37185",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Pocé-sur-Cisse"
       }
     },
@@ -38606,10 +38606,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37240",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37029",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Bossée"
       }
     },
@@ -38914,10 +38914,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37310",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37234",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Quentin-sur-Indrois"
       }
     },
@@ -39190,10 +39190,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37700",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37233",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Pierre-des-Corps"
       }
     },
@@ -39358,10 +39358,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37390",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37172",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Notre-Dame-d'Oé"
       }
     },
@@ -39826,10 +39826,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37340",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37082",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Continvoir"
       }
     },
@@ -40062,10 +40062,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37232",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Saint-Patrice"
       }
     },
@@ -40286,10 +40286,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37530",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37161",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Mosnes"
       }
     },
@@ -40474,10 +40474,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37150",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37091",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Croix-en-Touraine"
       }
     },
@@ -40866,10 +40866,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37038",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Bréhémont"
       }
     },
@@ -41182,10 +41182,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37240",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37136",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Louroux"
       }
     },
@@ -41418,10 +41418,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37210",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37052",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Chançay"
       }
     },
@@ -41766,10 +41766,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37150",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37027",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Bléré"
       }
     },
@@ -42046,10 +42046,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37370",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37149",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Marray"
       }
     },
@@ -42414,10 +42414,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37190",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37067",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Cheillé"
       }
     },
@@ -42730,10 +42730,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37330",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37086",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Courcelles-de-Touraine"
       }
     },
@@ -42990,10 +42990,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37800",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37212",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Sainte-Catherine-de-Fierbois"
       }
     },
@@ -43502,10 +43502,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37200",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37261",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Tours"
       }
     },
@@ -43774,10 +43774,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37360",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37021",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Beaumont-la-Ronce"
       }
     },
@@ -43970,10 +43970,10 @@
         "administrativeLevel": 5,
         "administrativeName": "commune",
         "code": "37130",
-        "country": "FR",
+        "countryCode": "FR",
         "insee": "37102",
-        "isCity": true,
-        "isCountry": false,
+        "city": true,
+        "country": false,
         "name": "Essards"
       }
     }

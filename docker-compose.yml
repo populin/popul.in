@@ -29,7 +29,7 @@ services:
     ports: 
       - "9202:9200"
     volumes: 
-      - "./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
+      - "./docker/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
       - "./data/elastic:/usr/share/elasticsearch/data"
 
   populin-kibana: 
@@ -42,7 +42,7 @@ services:
     ports: 
       - "5601:5601"
     volumes: 
-      - "./config/kibana.yml:/usr/share/kibana/config/kibana.yml"
+      - "./docker/config/kibana.yml:/usr/share/kibana/config/kibana.yml"
 
 networks:
   populin:

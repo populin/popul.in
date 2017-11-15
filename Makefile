@@ -13,23 +13,27 @@ stop:
 
 restart: stop start
 
-dep-install:
+install:
 	$(EXEC_POPULIN) bash -c "dep ensure -vendor-only"
 
-bash-geography: 
+bash: 
 	$(EXEC_POPULIN) bash
 
-run-geography: 
+run: 
 	@$(EXEC_POPULIN) bash -c "go build && ./popul.in"
 
-test-geography: 
+test: 
 	@$(EXEC_POPULIN) bash -c "godog"
 
-lint-geography: 
+lint: 
 	@$(EXEC_POPULIN) bash -c "gometalinter.v1 --config gometalinter.json ./..."
 
-import-geography-fixtures: 
+fix:
+	@$(EXEC_POPULIN) bash -c "gofmt -s -w ."
+	@$(EXEC_POPULIN) bash -c "goimports -w ."
+
+import-fixtures: 
 	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/importer && importer data/geography/fixtures"
 
-import-geography-data: 
+import-data: 
 	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/importer && importer data/geography/real"

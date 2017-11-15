@@ -6522,9 +6522,9 @@
         "administrativeLevel": 2,
         "administrativeName": "département",
         "code": "37",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Indre-et-Loire"
       }
     },
@@ -13393,9 +13393,9 @@
         "administrativeLevel": 2,
         "administrativeName": "département",
         "code": "72",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Sarthe"
       }
     },
@@ -20828,9 +20828,9 @@
         "administrativeLevel": 2,
         "administrativeName": "département",
         "code": "41",
-        "country": "FR",
-        "isCity": false,
-        "isCountry": false,
+        "countryCode": "FR",
+        "city": false,
+        "country": false,
         "name": "Loir-et-Cher"
       }
     }

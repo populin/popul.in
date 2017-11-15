@@ -15,7 +15,7 @@ type ErrorResponse struct {
 // ValidationErrorResponse is a JSON response for validation errors
 type ValidationErrorResponse struct {
 	ErrorResponse
-	Errors map[string]error `json:"errors"`
+	Errors map[string]string `json:"errors"`
 }
 
 // Error is a Gin handler func to create an error response
@@ -31,8 +31,10 @@ func ValidationError(status int, errors map[string]error) func(c *gin.Context) {
 	return func(c *gin.Context) {
 
 		keys := make([]string, 0, len(errors))
-		for k := range errors {
+		messages := make(map[string]string)
+		for k, err := range errors {
 			keys = append(keys, k)
+			messages[k] = err.Error()
 		}
 
 		message := fmt.Sprintf("Invalid values provided for %s", strings.Join(keys, ", "))
@@ -42,7 +44,7 @@ func ValidationError(status int, errors map[string]error) func(c *gin.Context) {
 			ErrorResponse: ErrorResponse{
 				Message: message,
 			},
-			Errors: errors,
+			Errors: messages,
 		})
 	}
 }
