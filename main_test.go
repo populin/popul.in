@@ -10,14 +10,16 @@ import (
 	"testing"
 	"time"
 
+	"strings"
+
 	"github.com/DATA-DOG/godog"
 	"github.com/DATA-DOG/godog/gherkin"
 	"github.com/gin-gonic/gin"
+	"github.com/google/jsonapi"
 	"github.com/paulmach/go.geojson"
 	"github.com/pkg/errors"
 	"github.com/populin/popul.in/api"
 	"github.com/populin/popul.in/elastic"
-	"github.com/populin/popul.in/handlers"
 	"github.com/xeipuuv/gojsonschema"
 )
 
@@ -136,19 +138,24 @@ func (a *apiFeature) theGeoJSONPropertyShouldBeEqualTo(prop string, value string
 }
 
 func (a *apiFeature) theErrorMessageShouldBe(message string) error {
-	errorMessage := handlers.ErrorResponse{}
+	errorsPayload := jsonapi.ErrorsPayload{}
 
-	err := json.Unmarshal(a.resp.Body.Bytes(), &errorMessage)
+	err := json.Unmarshal(a.resp.Body.Bytes(), &errorsPayload)
 
 	if err != nil {
 		return err
 	}
 
-	if errorMessage.Message != message {
-		return fmt.Errorf("expected error message to be %s, but actual is %s", message, errorMessage.Message)
+	var messages []string
+
+	for _, err := range errorsPayload.Errors {
+		if err.Detail == message {
+			return nil
+		}
+		messages = append(messages, err.Detail)
 	}
 
-	return nil
+	return fmt.Errorf("message error \"%s\" was not found (found: %s)", message, strings.Join(messages, ", "))
 }
 
 func (a *apiFeature) theJSONShouldBeValidAccordingToThisSchema(body *gherkin.DocString) error {

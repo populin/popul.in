@@ -329,11 +329,11 @@ Feature: get divisions
   Scenario: Get divisions with invalid latitude
     When I send a "GET" request to "/divisions?latitude=chuck&longitude=0.688802" accepting "application/geo+json"
     Then the response code should be 400
-    And the error message should be "Invalid values provided for latitude"
-    And the response header "Content-Type" should be "application/json; charset=utf-8"
+    And the error message should be "Invalid Float Value 'chuck' Type 'float64' Namespace 'latitude'"
+    And the response header "Content-Type" should be "application/vnd.api+json; charset=utf-8"
 
   Scenario: Get divisions with invalid longitude
     When I send a "GET" request to "/divisions?latitude=47.390359&longitude=norris" accepting "application/geo+json"
     Then the response code should be 400
-    And the error message should be "Invalid values provided for longitude"
-    And the response header "Content-Type" should be "application/json; charset=utf-8"
+    And the error message should be "Invalid Float Value 'norris' Type 'float64' Namespace 'longitude'"
+    And the response header "Content-Type" should be "application/vnd.api+json; charset=utf-8"

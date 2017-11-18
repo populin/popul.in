@@ -25,8 +25,10 @@ func ByID(c *gin.Context) {
 	feature, err := ds.FindOneByID(id, showGeometry)
 
 	if err != nil {
-		Error(http.StatusNotFound, fmt.Errorf("Division %s not found", id))(c)
-		c.Abort()
+		b := NewErrorBuilder()
+		b.AddError(http.StatusNotFound, fmt.Sprintf("Division %s not found", id))
+		handler := Error(b.Errors...)
+		handler(c)
 		return
 	}
 
@@ -35,8 +37,10 @@ func ByID(c *gin.Context) {
 	r, err := s.Serialize(c, feature)
 
 	if err != nil {
-		Error(http.StatusBadRequest, err)(c)
-		c.Abort()
+		b := NewErrorBuilder()
+		b.AddError(http.StatusBadRequest, err.Error())
+		handler := Error(b.Errors...)
+		handler(c)
 		return
 	}
 
@@ -70,8 +74,12 @@ func Search(c *gin.Context) {
 	errs := f.Filter(query)
 
 	if len(errs) > 0 {
-		ValidationError(http.StatusBadRequest, errs)(c)
-		c.Abort()
+		b := NewErrorBuilder()
+		for _, err := range errs {
+			b.AddError(http.StatusBadRequest, err.Error())
+		}
+		handler := Error(b.Errors...)
+		handler(c)
 		return
 	}
 
@@ -86,8 +94,10 @@ func Search(c *gin.Context) {
 	p.TotalItems = uint(total)
 
 	if err != nil {
-		Error(http.StatusServiceUnavailable, err)(c)
-		c.Abort()
+		b := NewErrorBuilder()
+		b.AddError(http.StatusServiceUnavailable, err.Error())
+		handler := Error(b.Errors...)
+		handler(c)
 		return
 	}
 
@@ -96,8 +106,10 @@ func Search(c *gin.Context) {
 	r, err := s.Serialize(c, features)
 
 	if err != nil {
-		Error(http.StatusBadRequest, err)(c)
-		c.Abort()
+		b := NewErrorBuilder()
+		b.AddError(http.StatusBadRequest, err.Error())
+		handler := Error(b.Errors...)
+		handler(c)
 		return
 	}
 
