@@ -52,34 +52,17 @@ func Search(c *gin.Context) {
 	ds := c.MustGet("divisions_storage").(*storage.DivisionsStorage)
 	p := c.MustGet("pagination").(*request.Pagination)
 
-	showGeometry := false
 	var sorting elastic.Sorter
 
 	if c.GetHeader("Accept") == constants.GeoJSON {
-		showGeometry = true
 		sorting = elastic.NewFieldSort("properties.administrativeLevel")
 	} else {
 		sorting = elastic.NewScoreSort()
 	}
 
-	f := filters.NewAggregator(
-		c.Request.URL.Query(),
-		filters.NewFeatureCoordinatesFilter(),
-		filters.NewCityFilter(),
-		filters.NewSearchFilter(),
-	)
+	query := generateQuery(c)
 
-	query := elastic.NewBoolQuery()
-
-	errs := f.Filter(query)
-
-	if len(errs) > 0 {
-		b := NewErrorBuilder()
-		for _, err := range errs {
-			b.AddError(http.StatusBadRequest, err.Error())
-		}
-		handler := Error(b.Errors...)
-		handler(c)
+	if c.IsAborted() {
 		return
 	}
 
@@ -88,7 +71,7 @@ func Search(c *gin.Context) {
 		sorting,
 		int((p.Page-1)*p.Size),
 		int(p.Size),
-		showGeometry,
+		c.GetHeader("Accept") == constants.GeoJSON,
 	)
 
 	p.TotalItems = uint(total)
@@ -114,4 +97,28 @@ func Search(c *gin.Context) {
 	}
 
 	c.Writer.Write(r)
+}
+
+func generateQuery(c *gin.Context) elastic.Query {
+	f := filters.NewAggregator(
+		c.Request.URL.Query(),
+		filters.NewFeatureCoordinatesFilter(),
+		filters.NewCityFilter(),
+		filters.NewSearchFilter(),
+	)
+
+	query := elastic.NewBoolQuery()
+
+	errs := f.Filter(query)
+
+	if len(errs) > 0 {
+		b := NewErrorBuilder()
+		for _, err := range errs {
+			b.AddError(http.StatusBadRequest, err.Error())
+		}
+		handler := Error(b.Errors...)
+		handler(c)
+	}
+
+	return query
 }
