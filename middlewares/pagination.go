@@ -15,7 +15,12 @@ func Pagination() gin.HandlerFunc {
 		p, err := request.ExtractPagination(c.Request.URL.Query())
 
 		if decodeErrors, ok := err.(form.DecodeErrors); ok {
-			handlers.ValidationError(http.StatusBadRequest, decodeErrors)
+			b := handlers.NewErrorBuilder()
+			for _, err := range decodeErrors {
+				b.AddError(http.StatusBadRequest, err.Error())
+			}
+			handler := handlers.Error(b.Errors...)
+			handler(c)
 			c.Abort()
 			return
 		}

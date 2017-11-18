@@ -74,4 +74,4 @@ Feature: get divisions
     When I send a "GET" request to "/divisions/not-found" accepting "application/geo+json"
     Then the response code should be 404
     And the error message should be "Division not-found not found"
-    And the response header "Content-Type" should be "application/json; charset=utf-8"
+    And the response header "Content-Type" should be "application/vnd.api+json; charset=utf-8"

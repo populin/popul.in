@@ -20,7 +20,10 @@ func Negotiate(formats ...string) gin.HandlerFunc {
 			}
 		}
 
-		handlers.Error(http.StatusNotAcceptable, fmt.Errorf("format %s is not supported", c.GetHeader("Accept")))(c)
+		b := handlers.NewErrorBuilder()
+		b.AddError(http.StatusNotAcceptable, fmt.Sprintf("format %s is not supported", c.GetHeader("Accept")))
+		handler := handlers.Error(b.Errors...)
+		handler(c)
 		c.Abort()
 		return
 	}

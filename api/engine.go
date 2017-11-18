@@ -1,10 +1,7 @@
 package api
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
-	"github.com/pkg/errors"
 	"github.com/populin/popul.in/constants"
 	"github.com/populin/popul.in/handlers"
 	"github.com/populin/popul.in/middlewares"
@@ -41,8 +38,8 @@ func Setup(ESClient *elastic.Client) *gin.Engine {
 	})
 
 	// error handlers
-	router.NoRoute(handlers.Error(http.StatusNotFound, errors.New("Not found")))
-	router.NoMethod(handlers.Error(http.StatusMethodNotAllowed, errors.New("Method not allowed")))
+	router.NoRoute(handlers.NotFound())
+	router.NoMethod(handlers.MethodNotAllowed())
 	router.HandleMethodNotAllowed = true
 
 	// global middlewares
