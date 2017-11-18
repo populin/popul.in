@@ -34,7 +34,7 @@ func (a Aggregator) Filter(query *elastic.BoolQuery) map[string]error {
 			if decodeErrors, ok := err.(form.DecodeErrors); ok {
 				return decodeErrors
 			}
-			errs["bad_request"] = err
+			errs["Bad Request"] = err
 		}
 	}
 
