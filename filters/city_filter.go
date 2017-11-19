@@ -4,7 +4,7 @@ import (
 	"net/url"
 
 	"github.com/go-playground/form"
-	"gopkg.in/olivere/elastic.v5"
+	"github.com/olivere/elastic"
 )
 
 // CityFilter holds the filter behavior and the query form data

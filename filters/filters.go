@@ -4,7 +4,7 @@ import (
 	"net/url"
 
 	"github.com/go-playground/form"
-	"gopkg.in/olivere/elastic.v5"
+	"github.com/olivere/elastic"
 )
 
 // ElasticFilter defines the Filter method which builds the ElasticSearch BoolQuery depending on url values
