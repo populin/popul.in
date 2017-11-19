@@ -4,9 +4,9 @@ import (
 	"net/url"
 
 	"github.com/go-playground/form"
+	"github.com/olivere/elastic"
 	"github.com/pkg/errors"
 	es "github.com/populin/popul.in/elastic"
-	"gopkg.in/olivere/elastic.v5"
 )
 
 // FeatureCoordinatesFilter holds the filter behavior and the query form data

@@ -1,6 +1,8 @@
 EXEC=docker exec -it 
 EXEC_POPULIN=$(EXEC) populin-api 
 
+.PHONY: build start stop restart install bash run run test lint fix import-fixtures import-data
+
 build:
 	@docker-compose build 
 

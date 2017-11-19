@@ -2,10 +2,7 @@
   "Vendor": true,
   "Deadline": "10m",
   "Sort": ["linter", "severity", "path", "line"],
-  "Exclude": [
-    "cli/compose/schema/bindata.go",
-    "parameter .* always receives"
-  ],
+  "Exclude": [],
   "EnableGC": true,
   "DisableAll": true,
   "Enable": [
@@ -24,6 +21,6 @@
     "unused",
     "vet"
   ],
-  "Cyclo": 16,
+  "Cyclo": 10,
   "LineLength": 200
 }

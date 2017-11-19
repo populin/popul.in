@@ -7,12 +7,13 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/olivere/elastic"
 	"github.com/paulmach/go.geojson"
+	"github.com/pkg/errors"
 	"github.com/populin/popul.in/constants"
 	es "github.com/populin/popul.in/elastic"
 	"github.com/populin/popul.in/slugger"
 	"github.com/urfave/cli"
-	"gopkg.in/olivere/elastic.v5"
 )
 
 // Mapping is the ElasticSearch Mapping for divisions in geography
@@ -31,7 +32,7 @@ const Mapping = `
 					"properties": {
 						"properties": {
 							"name": {
-							  "type": "string"
+							  "type": "text"
 							},
 							"administrativeLevel": {
 							  "type": "integer"
@@ -41,10 +42,10 @@ const Mapping = `
 							  "fielddata": true
 							},
 							"code": {
-							  "type": "string"
+							  "type": "text"
 							},
 							"countryCode": {
-							  "type": "string"
+							  "type": "text"
 							},
 							"city": {
 							  "type": "boolean"
@@ -74,13 +75,13 @@ func importFolder(c *cli.Context) error {
 
 	files, err := filepath.Glob(fmt.Sprintf("%s/*.json", folder))
 	if err != nil {
-		return err
+		panic(err)
 	}
 
 	processor, err := getProcessor()
 
 	if err != nil {
-		return err
+		panic(err)
 	}
 
 	for _, file := range files {
@@ -138,12 +139,14 @@ func getProcessor() (*elastic.BulkProcessor, error) {
 	createIndex, err := clt.CreateIndex(constants.ESIndexGeography).
 		BodyString(Mapping).
 		Do(ctx)
+
 	if err != nil {
 		return nil, err
 	}
 
 	if !createIndex.Acknowledged {
 		// Not acknowledged
+		return nil, errors.New("not acknowledged")
 	}
 
 	return clt.BulkProcessor().

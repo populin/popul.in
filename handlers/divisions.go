@@ -5,12 +5,12 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/olivere/elastic"
 	"github.com/populin/popul.in/constants"
 	"github.com/populin/popul.in/filters"
 	"github.com/populin/popul.in/request"
 	"github.com/populin/popul.in/serializer"
 	"github.com/populin/popul.in/storage"
-	"gopkg.in/olivere/elastic.v5"
 )
 
 // ByID returns a Feature by its ID
