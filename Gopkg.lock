@@ -56,6 +56,12 @@
   revision = "2bca23e0e452137f789efbc8610126fd8b94f73b"
 
 [[projects]]
+  name = "github.com/olivere/elastic"
+  packages = ["."]
+  revision = "482b5f3735c46598931a3b75dd69e1480ea67f4b"
+  version = "v5.0.55"
+
+[[projects]]
   name = "github.com/paulmach/go.geojson"
   packages = ["."]
   revision = "16c6a8e9da10025ce1b0c4515298e5bb4289a8c4"
@@ -123,7 +129,7 @@
 
 [[projects]]
   name = "gopkg.in/olivere/elastic.v5"
-  packages = [".","config","uritemplates"]
+  packages = ["config","uritemplates"]
   revision = "2a08d39723b7f4df92b96e2dff891a60952714d6"
   version = "v5.0.48"
 
@@ -136,6 +142,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "2b26b6911f0761e2ab960e01c7c30db09156af4d8e479d2808f1421d3475fa06"
+  inputs-digest = "c6187b11cf0617185a8f6f556ae8b9b50b85106b277fbdde2b5f76654f998fdd"
   solver-name = "gps-cdcl"
   solver-version = 1

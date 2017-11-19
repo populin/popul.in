@@ -4,10 +4,10 @@ import (
 	"context"
 	"encoding/json"
 
+	"github.com/olivere/elastic"
 	"github.com/populin/popul.in/constants"
 	es "github.com/populin/popul.in/elastic"
 	"github.com/populin/popul.in/geojson"
-	"gopkg.in/olivere/elastic.v5"
 )
 
 // New is the DivisionsStorage factory

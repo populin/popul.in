@@ -60,3 +60,7 @@
 [[constraint]]
   name = "github.com/google/jsonapi"
   version = "1.0.0"
+
+[[constraint]]
+  name = "github.com/olivere/elastic"
+  version = "5.0.55"
