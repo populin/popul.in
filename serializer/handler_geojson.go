@@ -1,8 +1,6 @@
 package serializer
 
 import (
-	"encoding/json"
-
 	"fmt"
 
 	"github.com/gin-gonic/gin"
@@ -19,20 +17,18 @@ func (GeoJSONHandler) Supports(format string) bool {
 }
 
 // Handle marshal the data (from FormatHandler interface)
-func (GeoJSONHandler) Handle(c *gin.Context, o interface{}) ([]byte, error) {
+func (GeoJSONHandler) Handle(c *gin.Context, o interface{}) (interface{}, error) {
 	if features, ok := o.([]*geojson.Feature); ok {
 		c := geojson.NewFeatureCollection()
 		for _, feature := range features {
 			c.AddFeature(feature)
 		}
-		r, err := json.Marshal(c)
-		return r, err
+		return c, nil
 	}
 
 	if feature, ok := o.(*geojson.Feature); ok {
-		r, err := json.Marshal(feature)
-		return r, err
+		return feature, nil
 	}
 
-	return []byte{}, fmt.Errorf("cannot handle type %T", o)
+	return nil, fmt.Errorf("cannot handle type %T", o)
 }

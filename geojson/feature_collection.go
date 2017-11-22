@@ -1,13 +1,23 @@
 package geojson
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/google/jsonapi"
+)
 
 // A FeatureCollection correlates to a GeoJSON feature collection.
 type FeatureCollection struct {
 	Type        string                 `json:"type"`
 	BoundingBox []float64              `json:"bbox,omitempty"`
 	Features    []*Feature             `json:"features"`
-	CRS         map[string]interface{} `json:"crs,omitempty"` // Coordinate Reference System Objects are not currently supported
+	CRS         map[string]interface{} `json:"crs,omitempty"`
+	Links       *jsonapi.Links         `json:"links,omitempty"`
+}
+
+// Link add links to the FeatureCollection
+func (fc *FeatureCollection) Link(links jsonapi.Links) {
+	fc.Links = &links
 }
 
 // NewFeatureCollection creates and initializes a new feature collection.
