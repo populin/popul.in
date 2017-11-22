@@ -15,6 +15,7 @@ type FeatureCollection struct {
 	Links       *jsonapi.Links         `json:"links,omitempty"`
 }
 
+// Link add links to the FeatureCollection
 func (fc *FeatureCollection) Link(links jsonapi.Links) {
 	fc.Links = &links
 }
