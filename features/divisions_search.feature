@@ -121,42 +121,43 @@ Feature: get divisions
     And the JSON should be valid according to this schema:
       """
       {
-          "type": "object",
-          "properties": {
-              "features": {
-                  "type": "array",
-                  "minItems": 9,
-                  "maxItems": 9,
-                  "uniqueItems": true,
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "id": { "type": "string" },
-                          "type": { "type": "string" },
-                          "geometry": { "type": "null" },
-                          "properties": {
-                              "type": "object",
-                              "properties": {
-                                  "name": {
-                                      "type": "string",
-                                      "enum": [
-                                          "Tours",
-                                          "Tours-1",
-                                          "Tours-2",
-                                          "Tours-3",
-                                          "Tours-4",
-                                          "Joué-lès-Tours",
-                                          "Chambray-lès-Tours"
-                                      ]
-                                  }
-                              }
-                          }
-                      },
-                      "required": ["id", "type", "geometry", "properties"],
-                      "additionalProperties": false
+        "type": "object",
+        "properties": {
+          "features": {
+            "type": "array",
+            "minItems": 9,
+            "maxItems": 9,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "type": { "type": "string" },
+                "geometry": { "type": "null" },
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "enum": [
+                        "Tours",
+                        "Tours-1",
+                        "Tours-2",
+                        "Tours-3",
+                        "Tours-4",
+                        "Joué-lès-Tours",
+                        "Chambray-lès-Tours"
+                      ]
+                    }
                   }
-              }
+                },
+                "links": { "type": "object" }
+              },
+              "required": ["id", "type", "geometry", "properties", "links"],
+              "additionalProperties": false
+            }
           }
+        }
       }
       """
 
@@ -192,9 +193,10 @@ Feature: get divisions
                                       ]
                                   }
                               }
-                          }
+                          },
+                          "links": { "type": "object" }
                       },
-                      "required": ["id", "type", "geometry", "properties"],
+                      "required": ["id", "type", "geometry", "properties", "links"],
                       "additionalProperties": false
                   }
               }
@@ -209,38 +211,39 @@ Feature: get divisions
     And the JSON should be valid according to this schema:
       """
       {
-          "type": "object",
-          "properties": {
-              "features": {
-                  "type": "array",
-                  "minItems": 1,
-                  "maxItems": 1,
-                  "uniqueItems": true,
-                  "items": {
-                      "type": "object",
-                      "properties": {
-                          "id": { "type": "string" },
-                          "type": { "type": "string" },
-                          "geometry": { "type": "null" },
-                          "properties": {
-                              "type": "object",
-                              "properties": {
-                                  "name": {
-                                      "type": "string",
-                                      "enum": [ "Tours" ]
-                                  },
-                                  "city": {
-                                      "type": "boolean",
-                                      "enum": [ true ]
-                                  }
-                              }
-                          }
-                      },
-                      "required": ["id", "type", "geometry", "properties"],
-                      "additionalProperties": false
+        "type": "object",
+        "properties": {
+          "features": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "type": { "type": "string" },
+                "geometry": { "type": "null" },
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "enum": [ "Tours" ]
+                    },
+                    "city": {
+                      "type": "boolean",
+                      "enum": [ true ]
+                    }
                   }
-              }
+                },
+                "links": { "type": "object" }
+              },
+              "required": ["id", "type", "geometry", "properties", "links"],
+              "additionalProperties": false
+            }
           }
+        }
       }
       """
 
@@ -285,9 +288,10 @@ Feature: get divisions
               "required": ["id", "type", "geometry", "properties"],
               "additionalProperties": false
             }
-          }
+          },
+          "links": { "type": "object" }
         },
-        "required": ["type", "features"],
+        "required": ["type", "features", "links"],
         "additionalProperties": false
       }
       """
@@ -319,9 +323,10 @@ Feature: get divisions
               "required": ["id", "type", "geometry", "properties"],
               "additionalProperties": false
             }
-          }
+          },
+          "links": { "type": "object" }
         },
-        "required": ["type", "features"],
+        "required": ["type", "features", "links"],
         "additionalProperties": false
       }
       """
