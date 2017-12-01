@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	"github.com/populin/popul.in/constants"
-	"github.com/populin/popul.in/geojson"
+	"github.com/populin/popul.in/internal/constants"
+	"github.com/populin/popul.in/internal/platform/geojson"
 )
 
 // GeoJSONHandler is an struct implementing FormatHandler interface

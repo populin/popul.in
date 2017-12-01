@@ -18,8 +18,8 @@ import (
 	"github.com/google/jsonapi"
 	"github.com/paulmach/go.geojson"
 	"github.com/pkg/errors"
-	"github.com/populin/popul.in/api"
-	"github.com/populin/popul.in/elastic"
+	"github.com/populin/popul.in/cmd/api/engine"
+	"github.com/populin/popul.in/internal/platform/elastic"
 	"github.com/xeipuuv/gojsonschema"
 )
 
@@ -46,13 +46,13 @@ type apiFeature struct {
 }
 
 func (a *apiFeature) resetResponse(interface{}) {
-	api.SetTestMode()
+	engine.SetTestMode()
 
 	a.resp = httptest.NewRecorder()
 
-	clt, _ := elastic.NewClient()
+	clt, _ := elastic.NewClient(os.Getenv("ELASTIC_URL"), os.Getenv("ELASTIC_PORT"))
 
-	a.app = api.Setup(clt)
+	a.app = engine.Setup(clt)
 }
 
 func (a *apiFeature) iSendARequestToAccepting(method string, endpoint string, accept string) (err error) {

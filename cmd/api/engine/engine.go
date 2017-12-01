@@ -1,12 +1,12 @@
-package api
+package engine
 
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/olivere/elastic"
-	"github.com/populin/popul.in/constants"
-	"github.com/populin/popul.in/handlers"
-	"github.com/populin/popul.in/middlewares"
-	"github.com/populin/popul.in/storage"
+	"github.com/populin/popul.in/internal/constants"
+	"github.com/populin/popul.in/internal/handlers"
+	"github.com/populin/popul.in/internal/middlewares"
+	"github.com/populin/popul.in/internal/storage"
 )
 
 var modeName = gin.DebugMode

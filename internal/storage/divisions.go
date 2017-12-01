@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 
 	"github.com/olivere/elastic"
-	"github.com/populin/popul.in/constants"
-	es "github.com/populin/popul.in/elastic"
-	"github.com/populin/popul.in/geojson"
+	"github.com/populin/popul.in/internal/constants"
+	es "github.com/populin/popul.in/internal/platform/elastic"
+	"github.com/populin/popul.in/internal/platform/geojson"
 )
 
 // New is the DivisionsStorage factory
