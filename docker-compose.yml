@@ -11,11 +11,13 @@ services:
     environment: 
       ELASTIC_PORT: 9200
       ELASTIC_URL: populin-elasticsearch
-      ENV: dev
-    networks: 
+      API_ENV: dev
+      API_PORT: 80
+    networks:
       - populin
     ports:
       - "80:80"
+      - "6060:6060"
     tty: true
     volumes: 
       - ".:/go/src/github.com/populin/popul.in"

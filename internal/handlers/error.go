@@ -9,7 +9,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/jsonapi"
-	"github.com/populin/popul.in/constants"
+	"github.com/populin/popul.in/internal/constants"
 )
 
 // Error is a Gin handler func to create an error response

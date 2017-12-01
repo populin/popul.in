@@ -30,10 +30,6 @@ func ExtractPagination(v url.Values) (*Pagination, error) {
 		return nil, err
 	}
 
-	if p.Page < 1 {
-		p.Page = 1
-	}
-
 	if p.Size > 500 {
 		p.Size = 500
 	}

@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	"github.com/populin/popul.in/handlers"
+	"github.com/populin/popul.in/internal/handlers"
 )
 
 // Negotiate sets the request format into the context depending on Accept Header

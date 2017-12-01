@@ -8,7 +8,7 @@ const (
 	// JSONAPI is the identifier for the JSON API media type
 	JSONAPI = jsonapi.MediaType
 	// ESIndexGeography is the ElasticSearch Index
-	ESIndexGeography = "geography"
+	ESIndexGeography = "populin"
 	// ESTypeGeography is the ElasticSearch Type
 	ESTypeGeography = "division"
 )

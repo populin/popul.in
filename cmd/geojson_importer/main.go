@@ -10,9 +10,9 @@ import (
 	"github.com/olivere/elastic"
 	"github.com/paulmach/go.geojson"
 	"github.com/pkg/errors"
-	"github.com/populin/popul.in/constants"
-	es "github.com/populin/popul.in/elastic"
-	"github.com/populin/popul.in/slugger"
+	"github.com/populin/popul.in/internal/constants"
+	es "github.com/populin/popul.in/internal/platform/elastic"
+	"github.com/populin/popul.in/internal/platform/slugger"
 	"github.com/urfave/cli"
 )
 
@@ -114,7 +114,7 @@ func importFolder(c *cli.Context) error {
 func getProcessor() (*elastic.BulkProcessor, error) {
 	ctx := context.Background()
 
-	clt, err := es.NewClient()
+	clt, err := es.NewClient(os.Getenv("ELASTIC_URL"), os.Getenv("ELASTIC_PORT"))
 
 	if err != nil {
 		return nil, err

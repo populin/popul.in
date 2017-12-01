@@ -6,11 +6,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/olivere/elastic"
-	"github.com/populin/popul.in/constants"
-	"github.com/populin/popul.in/filters"
-	"github.com/populin/popul.in/request"
-	"github.com/populin/popul.in/serializer"
-	"github.com/populin/popul.in/storage"
+	"github.com/populin/popul.in/internal/constants"
+	"github.com/populin/popul.in/internal/filters"
+	"github.com/populin/popul.in/internal/request"
+	"github.com/populin/popul.in/internal/serializer"
+	"github.com/populin/popul.in/internal/storage"
 )
 
 // ByID returns a Feature by its ID
