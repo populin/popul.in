@@ -19,6 +19,6 @@ before_script:
   - dep ensure -vendor-only
 
 script:
-  - go install github.com/populin/popul.in/importer && importer data/geography/fixtures
-  - go test -race -v
+  - go install github.com/populin/popul.in/cmd/geojson_importer && geojson_importer data/geography/fixtures
+  - go test ./... -race -v
   - gometalinter.v1 --config gometalinter.json ./...

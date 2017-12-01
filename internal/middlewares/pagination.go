@@ -5,8 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/form"
-	"github.com/populin/popul.in/handlers"
-	"github.com/populin/popul.in/request"
+	"github.com/populin/popul.in/internal/handlers"
+	"github.com/populin/popul.in/internal/request"
 )
 
 // Pagination is a handler Gin func to extract pagination params from the request

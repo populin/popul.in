@@ -5,8 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
-	"github.com/populin/popul.in/jsonapi"
-	"github.com/populin/popul.in/request"
+	"github.com/populin/popul.in/internal/platform/jsonapi"
+	"github.com/populin/popul.in/internal/request"
 )
 
 // Serializer is a registry of FormatHandler structs

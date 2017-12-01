@@ -16,16 +16,20 @@ stop:
 restart: stop start
 
 install:
-	$(EXEC_POPULIN) bash -c "dep ensure -vendor-only"
+	$(EXEC_POPULIN) bash -c "dep ensure -vendor-only -v"
 
 bash: 
 	$(EXEC_POPULIN) bash
 
 run: 
-	@$(EXEC_POPULIN) bash -c "go build && ./popul.in"
+	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/cmd/api && api"
+
+doc: 
+	@echo "documentation available on http://localhost:6060/pkg/github.com/populin/popul.in"
+	@$(EXEC_POPULIN) bash -c "godoc -http=\":6060\""
 
 test: 
-	@$(EXEC_POPULIN) bash -c "godog"
+	@$(EXEC_POPULIN) bash -c "cd cmd/api && godog"
 
 lint: 
 	@$(EXEC_POPULIN) bash -c "gometalinter.v1 --config gometalinter.json ./..."
@@ -35,7 +39,7 @@ fix:
 	@$(EXEC_POPULIN) bash -c "goimports -w ."
 
 import-fixtures: 
-	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/importer && importer data/geography/fixtures"
+	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/cmd/geojson_importer && geojson_importer data/geography/fixtures"
 
 import-data: 
-	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/importer && importer data/geography/real"
+	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/cmd/geojson_importer && geojson_importer data/geography/real"

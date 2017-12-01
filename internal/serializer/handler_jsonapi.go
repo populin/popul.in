@@ -3,8 +3,8 @@ package serializer
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/jsonapi"
-	"github.com/populin/popul.in/constants"
-	ja "github.com/populin/popul.in/jsonapi"
+	"github.com/populin/popul.in/internal/constants"
+	ja "github.com/populin/popul.in/internal/platform/jsonapi"
 )
 
 // JSONAPIHandler is an struct implementing FormatHandler interface
