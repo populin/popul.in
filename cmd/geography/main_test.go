@@ -18,13 +18,13 @@ import (
 	"github.com/google/jsonapi"
 	"github.com/paulmach/go.geojson"
 	"github.com/pkg/errors"
-	"github.com/populin/popul.in/cmd/api/engine"
+	"github.com/populin/popul.in/cmd/geography/engine"
 	"github.com/populin/popul.in/internal/platform/elastic"
 	"github.com/xeipuuv/gojsonschema"
 )
 
 func TestMain(m *testing.M) {
-	status := godog.RunWithOptions("godog", func(s *godog.Suite) {
+	status := godog.RunWithOptions("geography", func(s *godog.Suite) {
 		FeatureContext(s)
 	}, godog.Options{
 		Format:    "progress",
@@ -50,7 +50,7 @@ func (a *apiFeature) resetResponse(interface{}) {
 
 	a.resp = httptest.NewRecorder()
 
-	clt, _ := elastic.NewClient(os.Getenv("ELASTIC_URL"), os.Getenv("ELASTIC_PORT"))
+	clt, _ := elastic.NewClient(os.Getenv("POPULIN_GEOGRAPHY_ELASTIC_URL"), os.Getenv("POPULIN_GEOGRAPHY_ELASTIC_PORT"))
 
 	a.app = engine.Setup(clt)
 }

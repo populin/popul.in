@@ -1,4 +1,4 @@
-FROM golang:1.9
+FROM golang:1.10
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH

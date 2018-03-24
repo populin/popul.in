@@ -114,7 +114,7 @@ func importFolder(c *cli.Context) error {
 func getProcessor() (*elastic.BulkProcessor, error) {
 	ctx := context.Background()
 
-	clt, err := es.NewClient(os.Getenv("ELASTIC_URL"), os.Getenv("ELASTIC_PORT"))
+	clt, err := es.NewClient(os.Getenv("POPULIN_ELASTIC_URL"), os.Getenv("POPULIN_ELASTIC_PORT"))
 
 	if err != nil {
 		return nil, err
