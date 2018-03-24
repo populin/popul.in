@@ -16,7 +16,7 @@ import (
 // ByID returns a Feature by its ID
 func ByID(c *gin.Context) {
 
-	ds := c.MustGet("divisions_storage").(*storage.DivisionsStorage)
+	ds := c.MustGet("divisions_storage").(*storage.DivisionStorage)
 
 	id := c.Param("id")
 
@@ -49,7 +49,7 @@ func ByID(c *gin.Context) {
 
 // Search parses the request to search for features
 func Search(c *gin.Context) {
-	ds := c.MustGet("divisions_storage").(*storage.DivisionsStorage)
+	ds := c.MustGet("divisions_storage").(*storage.DivisionStorage)
 	p := c.MustGet("pagination").(*request.Pagination)
 
 	var sorting elastic.Sorter

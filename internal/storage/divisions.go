@@ -10,18 +10,18 @@ import (
 	"github.com/populin/popul.in/internal/platform/geojson"
 )
 
-// New is the DivisionsStorage factory
-func New(client *elastic.Client) *DivisionsStorage {
-	return &DivisionsStorage{client}
+// New is the DivisionStorage factory
+func New(client *elastic.Client) *DivisionStorage {
+	return &DivisionStorage{client}
 }
 
-// DivisionsStorage embed the ES client and is the gateway for stored division
-type DivisionsStorage struct {
+// DivisionStorage embed the ES client and is the gateway for stored division
+type DivisionStorage struct {
 	client *elastic.Client
 }
 
 // FindOneByID gets a division by its ID
-func (storage *DivisionsStorage) FindOneByID(id string, showGeometry bool) (*geojson.Feature, error) {
+func (storage *DivisionStorage) FindOneByID(id string, showGeometry bool) (*geojson.Feature, error) {
 	var fsc *elastic.FetchSourceContext
 
 	if !showGeometry {
@@ -49,7 +49,7 @@ func (storage *DivisionsStorage) FindOneByID(id string, showGeometry bool) (*geo
 }
 
 // GetGeoShapeQuery returns a geo_shape Query
-func (storage *DivisionsStorage) GetGeoShapeQuery(lat float64, lon float64, radius uint64) elastic.Query {
+func (storage *DivisionStorage) GetGeoShapeQuery(lat float64, lon float64, radius uint64) elastic.Query {
 	query := es.NewGeoShapeQuery(lon, lat)
 	query.SetRadius(radius)
 
@@ -57,7 +57,7 @@ func (storage *DivisionsStorage) GetGeoShapeQuery(lat float64, lon float64, radi
 }
 
 // GetSearchResults returns a FeatureCollection from a BoolQuery
-func (storage *DivisionsStorage) GetSearchResults(query elastic.Query, sorter elastic.Sorter, from int, size int, showGeometry bool) ([]*geojson.Feature, int64, error) {
+func (storage *DivisionStorage) GetSearchResults(query elastic.Query, sorter elastic.Sorter, from int, size int, showGeometry bool) ([]*geojson.Feature, int64, error) {
 
 	var fsc *elastic.FetchSourceContext
 	if !showGeometry {

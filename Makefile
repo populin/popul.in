@@ -1,5 +1,5 @@
 EXEC=docker exec -it 
-EXEC_POPULIN=$(EXEC) populin-api 
+EXEC_POPULIN=$(EXEC) populin-geography-api
 
 .PHONY: build start stop restart install bash run run test lint fix import-fixtures import-data
 
@@ -18,18 +18,21 @@ restart: stop start
 install:
 	$(EXEC_POPULIN) bash -c "dep ensure -vendor-only -v"
 
+update:
+	$(EXEC_POPULIN) bash -c "dep ensure -update"
+
 bash: 
 	$(EXEC_POPULIN) bash
 
 run: 
-	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/cmd/api && api"
+	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/cmd/geography && geography"
 
 doc: 
 	@echo "documentation available on http://localhost:6060/pkg/github.com/populin/popul.in"
 	@$(EXEC_POPULIN) bash -c "godoc -http=\":6060\""
 
 test: 
-	@$(EXEC_POPULIN) bash -c "cd cmd/api && godog"
+	@$(EXEC_POPULIN) bash -c "cd cmd/geography && godog"
 
 lint: 
 	@$(EXEC_POPULIN) bash -c "gometalinter.v1 --config gometalinter.json ./..."
@@ -43,3 +46,6 @@ import-fixtures:
 
 import-data: 
 	@$(EXEC_POPULIN) bash -c "go install github.com/populin/popul.in/cmd/geojson_importer && geojson_importer data/geography/real"
+
+cloc:
+	@cloc --exclude-list-file=.clocignore .
