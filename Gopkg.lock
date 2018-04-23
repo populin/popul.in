@@ -2,10 +2,14 @@
 
 
 [[projects]]
+  branch = "master"
   name = "github.com/DATA-DOG/godog"
-  packages = [".","colors","gherkin"]
-  revision = "4dc98b0e2b130c3c9d06868a050320e5b310d3e7"
-  version = "v0.7.4"
+  packages = [
+    ".",
+    "colors",
+    "gherkin"
+  ]
+  revision = "943635096a91d89d87b4bb07c395d96843a27c2f"
 
 [[projects]]
   branch = "master"
@@ -15,21 +19,25 @@
 
 [[projects]]
   name = "github.com/gin-gonic/gin"
-  packages = [".","binding","render"]
+  packages = [
+    ".",
+    "binding",
+    "render"
+  ]
   revision = "d459835d2b077e44f7c9b453505ee29881d5d12d"
   version = "v1.2"
 
 [[projects]]
   name = "github.com/go-playground/form"
   packages = ["."]
-  revision = "7b3f7e7430f0f1b8a744c80bb7ce6a629c65b396"
-  version = "v3.0.1"
+  revision = "572fa772c66ec5e3606a1a548406e10fb62de317"
+  version = "v3.1.3"
 
 [[projects]]
-  branch = "master"
   name = "github.com/golang/protobuf"
   packages = ["proto"]
-  revision = "130e6b02ab059e7b717a096f397c5b60111cae74"
+  revision = "925541529c1fa6821df4e44ce2723319eb2be768"
+  version = "v1.0.0"
 
 [[projects]]
   name = "github.com/google/jsonapi"
@@ -42,6 +50,17 @@
   packages = ["."]
   revision = "e9f42fa127660e552d0ad2b589868d403a9be7c6"
   version = "v1.1.1"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/mailru/easyjson"
+  packages = [
+    ".",
+    "buffer",
+    "jlexer",
+    "jwriter"
+  ]
+  revision = "8b799c424f57fa123fc63a99d6383bc6e4c02578"
 
 [[projects]]
   name = "github.com/mattn/go-isatty"
@@ -58,14 +77,14 @@
 [[projects]]
   name = "github.com/olivere/elastic"
   packages = ["."]
-  revision = "482b5f3735c46598931a3b75dd69e1480ea67f4b"
-  version = "v5.0.55"
+  revision = "dbe820f35164384c998099db63481b583d53f73b"
+  version = "v5.0.66"
 
 [[projects]]
   name = "github.com/paulmach/go.geojson"
   packages = ["."]
-  revision = "16c6a8e9da10025ce1b0c4515298e5bb4289a8c4"
-  version = "v1.3"
+  revision = "aa3713dea4327980f5891ac781c6f1a45ea75c0f"
+  version = "v1.3.1"
 
 [[projects]]
   name = "github.com/pkg/errors"
@@ -80,10 +99,10 @@
   revision = "cb7f23ec59bec0d61b19c56cd88cee3d0cc1870c"
 
 [[projects]]
-  branch = "master"
   name = "github.com/ugorji/go"
   packages = ["codec"]
-  revision = "f76f59a92f8224c695c0e2c401b9ad17e820a8f5"
+  revision = "b4c50a2b199d93b13dc15e78929cfb23bfdf21ab"
+  version = "v1.1.1"
 
 [[projects]]
   name = "github.com/urfave/cli"
@@ -95,25 +114,25 @@
   branch = "master"
   name = "github.com/xeipuuv/gojsonpointer"
   packages = ["."]
-  revision = "6fe8760cad3569743d51ddbb243b26f8456742dc"
+  revision = "4e3ac2762d5f479393488629ee9370b50873b3a6"
 
 [[projects]]
   branch = "master"
   name = "github.com/xeipuuv/gojsonreference"
   packages = ["."]
-  revision = "e02fc20de94c78484cd5ffb007f8af96be030a45"
+  revision = "bd5ef7bd5415a7ac448318e64f11a24cd21e594b"
 
 [[projects]]
   branch = "master"
   name = "github.com/xeipuuv/gojsonschema"
   packages = ["."]
-  revision = "3f523f4c14b6e925da10475eb0447c2f28614aac"
+  revision = "2c8e4be869c17540b336bab0ea18b8d73e6a28b7"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "686000749eaec0b8855b8eef5336cf63899fe51d"
+  revision = "79b0c6888797020a994db17c8510466c72fe75d9"
 
 [[projects]]
   name = "gopkg.in/gin-contrib/cors.v1"
@@ -129,19 +148,22 @@
 
 [[projects]]
   name = "gopkg.in/olivere/elastic.v5"
-  packages = ["config","uritemplates"]
-  revision = "2a08d39723b7f4df92b96e2dff891a60952714d6"
-  version = "v5.0.48"
+  packages = [
+    "config",
+    "uritemplates"
+  ]
+  revision = "dbe820f35164384c998099db63481b583d53f73b"
+  version = "v5.0.66"
 
 [[projects]]
-  branch = "v2"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
-  revision = "eb3733d160e74a9c7e442f435eb3bea458e1d19f"
+  revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
+  version = "v2.2.1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "c6187b11cf0617185a8f6f556ae8b9b50b85106b277fbdde2b5f76654f998fdd"
+  inputs-digest = "66e185e12e9b57910828cba1f8b32e8e536a47f65985c355d939f6afe8d60668"
   solver-name = "gps-cdcl"
   solver-version = 1

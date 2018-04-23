@@ -1,12 +1,15 @@
 language: go
 
+go:
+        - "1.10"
+
 before_install:
   - curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.0.0.deb && sudo dpkg -i --force-confnew elasticsearch-6.0.0.deb && sudo service elasticsearch restart
 
 env:
   global:
-    - ELASTIC_PORT: 9200
-    - ELASTIC_URL: localhost
+    - POPULIN_GEOGRAPHY_ELASTIC_PORT: 9200
+    - POPULIN_GEOGRAPHY_ELASTIC_URL: localhost
 
 notifications:
   email: false
@@ -15,10 +18,10 @@ before_script:
   - sleep 10
   - go get github.com/golang/dep/... && go install github.com/golang/dep/...
   - go get github.com/DATA-DOG/godog/cmd/godog && go install github.com/DATA-DOG/godog/cmd/godog
-  - go get gopkg.in/alecthomas/gometalinter.v1 && go install gopkg.in/alecthomas/gometalinter.v1 && gometalinter.v1 --install
+  - go get github.com/alecthomas/gometalinter && go install github.com/alecthomas/gometalinter && gometalinter --install
   - dep ensure -vendor-only
 
 script:
   - go install github.com/populin/popul.in/cmd/geojson_importer && geojson_importer data/geography/fixtures
   - go test ./... -race -v
-  - gometalinter.v1 --config gometalinter.json ./...
+  - gometalinter ./...

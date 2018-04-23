@@ -3,9 +3,11 @@ package engine
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/olivere/elastic"
+	"github.com/populin/popul.in/cmd/geography/handlers"
 	"github.com/populin/popul.in/internal/constants"
-	"github.com/populin/popul.in/internal/handlers"
+	generichandlers "github.com/populin/popul.in/internal/handlers"
 	"github.com/populin/popul.in/internal/middlewares"
+	"github.com/populin/popul.in/internal/serializer"
 	"github.com/populin/popul.in/internal/storage"
 )
 
@@ -34,12 +36,13 @@ func Setup(ESClient *elastic.Client) *gin.Engine {
 
 	router.Use(func(c *gin.Context) {
 		c.Set("divisions_storage", storage.New(ESClient))
+		c.Set("serializer", serializer.NewSerializer(serializer.GeoJSONHandler{}, serializer.JSONAPIHandler{}))
 		c.Next()
 	})
 
 	// error handlers
-	router.NoRoute(handlers.NotFound())
-	router.NoMethod(handlers.MethodNotAllowed())
+	router.NoRoute(generichandlers.NotFound())
+	router.NoMethod(generichandlers.MethodNotAllowed())
 	router.HandleMethodNotAllowed = true
 
 	// global middlewares

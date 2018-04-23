@@ -8,6 +8,7 @@ import (
 	"github.com/olivere/elastic"
 	"github.com/populin/popul.in/internal/constants"
 	"github.com/populin/popul.in/internal/filters"
+	"github.com/populin/popul.in/internal/handlers"
 	"github.com/populin/popul.in/internal/request"
 	"github.com/populin/popul.in/internal/serializer"
 	"github.com/populin/popul.in/internal/storage"
@@ -16,7 +17,7 @@ import (
 // ByID returns a Feature by its ID
 func ByID(c *gin.Context) {
 
-	ds := c.MustGet("divisions_storage").(*storage.DivisionsStorage)
+	ds := c.MustGet("divisions_storage").(*storage.DivisionStorage)
 
 	id := c.Param("id")
 
@@ -25,21 +26,21 @@ func ByID(c *gin.Context) {
 	feature, err := ds.FindOneByID(id, showGeometry)
 
 	if err != nil {
-		b := NewErrorBuilder()
+		b := handlers.NewErrorBuilder()
 		b.AddError(http.StatusNotFound, fmt.Sprintf("Division %s not found", id))
-		handler := Error(b.Errors...)
+		handler := handlers.Error(b.Errors...)
 		handler(c)
 		return
 	}
 
-	s := serializer.NewSerializer()
+	s := c.MustGet("serializer").(serializer.Serializer)
 
 	r, err := s.Serialize(c, feature)
 
 	if err != nil {
-		b := NewErrorBuilder()
+		b := handlers.NewErrorBuilder()
 		b.AddError(http.StatusBadRequest, err.Error())
-		handler := Error(b.Errors...)
+		handler := handlers.Error(b.Errors...)
 		handler(c)
 		return
 	}
@@ -49,7 +50,7 @@ func ByID(c *gin.Context) {
 
 // Search parses the request to search for features
 func Search(c *gin.Context) {
-	ds := c.MustGet("divisions_storage").(*storage.DivisionsStorage)
+	ds := c.MustGet("divisions_storage").(*storage.DivisionStorage)
 	p := c.MustGet("pagination").(*request.Pagination)
 
 	var sorting elastic.Sorter
@@ -77,21 +78,21 @@ func Search(c *gin.Context) {
 	p.TotalItems = uint(total)
 
 	if err != nil {
-		b := NewErrorBuilder()
+		b := handlers.NewErrorBuilder()
 		b.AddError(http.StatusServiceUnavailable, err.Error())
-		handler := Error(b.Errors...)
+		handler := handlers.Error(b.Errors...)
 		handler(c)
 		return
 	}
 
-	s := serializer.NewSerializer()
+	s := c.MustGet("serializer").(serializer.Serializer)
 
 	r, err := s.Serialize(c, features)
 
 	if err != nil {
-		b := NewErrorBuilder()
+		b := handlers.NewErrorBuilder()
 		b.AddError(http.StatusBadRequest, err.Error())
-		handler := Error(b.Errors...)
+		handler := handlers.Error(b.Errors...)
 		handler(c)
 		return
 	}
@@ -112,11 +113,11 @@ func generateQuery(c *gin.Context) elastic.Query {
 	errs := f.Filter(query)
 
 	if len(errs) > 0 {
-		b := NewErrorBuilder()
+		b := handlers.NewErrorBuilder()
 		for _, err := range errs {
 			b.AddError(http.StatusBadRequest, err.Error())
 		}
-		handler := Error(b.Errors...)
+		handler := handlers.Error(b.Errors...)
 		handler(c)
 	}
 

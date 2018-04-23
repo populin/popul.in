@@ -25,6 +25,5 @@ func Negotiate(formats ...string) gin.HandlerFunc {
 		handler := handlers.Error(b.Errors...)
 		handler(c)
 		c.Abort()
-		return
 	}
 }
