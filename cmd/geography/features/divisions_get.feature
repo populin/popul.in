@@ -1,4 +1,4 @@
-Feature: get divisions
+Feature: GET divisions
   In order to get one or multiple divisions
   I need to do a GET request on the right url
 
@@ -35,7 +35,7 @@ Feature: get divisions
 
   Scenario: Get a known division
     When I send a "GET" request to "/divisions/fr-region-centre-val-de-loire-5727539415420288060" accepting "application/vnd.api+json"
-    And the response code should be 200
+    Then the response code should be 200
     And the response header "Content-Type" should be "application/vnd.api+json; charset=utf-8"
     And the JSON should be valid according to this schema:
       """

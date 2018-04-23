@@ -21,12 +21,9 @@ type FormatHandler interface {
 }
 
 // NewSerializer is the factory of Serializer
-func NewSerializer() Serializer {
+func NewSerializer(h ...FormatHandler) Serializer {
 	s := Serializer{
-		handlers: []FormatHandler{
-			GeoJSONHandler{},
-			JSONAPIHandler{},
-		},
+		handlers: h,
 	}
 	return s
 }

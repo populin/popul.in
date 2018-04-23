@@ -55,3 +55,11 @@
 [[constraint]]
   name = "github.com/olivere/elastic"
   version = "5.0.55"
+
+[[constraint]]
+  name = "github.com/go-sql-driver/mysql"
+  version = "1.3.0"
+
+[[constraint]]
+  name = "github.com/DATA-DOG/godog"
+  branch = "master"
