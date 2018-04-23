@@ -23,6 +23,25 @@ services:
       - ".:/go/src/github.com/populin/popul.in"
     working_dir: /go/src/github.com/populin/popul.in
 
+  populin-politics-api:
+    build:
+      context: docker/golang
+    container_name: populin-politics-api
+    depends_on:
+      - populin-politics-mysql
+    environment:
+      POPULIN_POLITICS_API_ENV: dev
+      POPULIN_POLITICS_API_PORT: 80
+    networks:
+      - politics
+    ports:
+      - 80:80
+      - 81:6060
+    tty: true
+    volumes:
+      - ".:/go/src/github.com/populin/popul.in"
+    working_dir: /go/src/github.com/populin/popul.in
+
   populin-geography-elasticsearch:
     container_name: populin-geography-elasticsearch
     image: "docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.2"
@@ -46,6 +65,19 @@ services:
     volumes: 
       - "./docker/config/kibana.yml:/usr/share/kibana/config/kibana.yml"
 
+  populin-politics-mysql:
+    container_name: populin-politics-mysql
+    image: mysql
+    restart: always
+    networks:
+      - politics
+    ports:
+      - 3310:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
 networks:
   geography:
+    driver: bridge
+  politics:
     driver: bridge
