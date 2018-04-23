@@ -1,4 +1,4 @@
-Feature: get divisions
+Feature: Search divisions
   In order to search divisions
   I need to do a GET request search urls and pass parameters
 
